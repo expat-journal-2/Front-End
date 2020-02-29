@@ -89,7 +89,7 @@ const SVGCircle = ({ radius }) => (
 
 ReactDOM.render(
 	<Countdown 
-		timeTillDate="03 06 2020, 9:00 am" 
+		timeTillDate="03 05 2020, 7:00 am" 
 		timeFormat="MM DD YYYY, h:mm a" 
 	/>, 
 	document.getElementById('app')
