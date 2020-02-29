@@ -1,17 +1,27 @@
 import React from 'react';
 
 import './App.css';
-import Countdown from './components/Countdown';
+
+import LoginPage from './components/LoginPage';
+import SignUpPage from './components/SignUpPage';
+import { Route, Switch } from 'react-router-dom';
+import PrivateRoute from './components/PrivateRoute.js';
+
+import NavigationBar from './components/NavigationBar.js';
+import Footer from './components/Footer.js';
+
 
 function App() {
   return (
     <div className="App">
      <h1>Welcome to Expat Journal Team 2</h1>
      <h2>We will be live in:</h2>
-     {/* <Countdown 
-		timeTillDate="03 06 2020, 9:00 am" 
-		timeFormat="MM DD YYYY, h:mm a" 
-	/> */}
+     <Switch>
+       <Route exact path='/sign-in' component={LoginPage} />
+       <Route exact path='/sign-up' component={SignUpPage}/>
+       <PrivateRoute path='/' component={NavigationBar} />
+     </Switch>
+    <Route path='/' component={Footer} /> 
     </div>
   );
 }
