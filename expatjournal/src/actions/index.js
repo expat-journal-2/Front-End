@@ -1,4 +1,6 @@
 import axios from 'axios';
+//may need to update to axiosWithAuth
+//may need to add/remove some of these actions/states
 
 export const FETCH_STORY = 'FETCH_STORY';
 export const FETCH_STORY_SUCCESS = 'FETCH_STORY_SUCCESS';
