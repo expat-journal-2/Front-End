@@ -20,8 +20,8 @@ function App() {
        <Route exact path='/sign-in' component={Login} />
        <Route exact path='/sign-up' component={SignUp}/>
        <PrivateRoute path='/' component={NavBar} />
-     </Switch>
-    <Route path='/' component={Footer} />  */}
+     </Switch>*/
+    <Route path='/' component={Footer} />  }
     </div>
   );
 }
