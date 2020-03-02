@@ -8,11 +8,21 @@ const FooterSection = styled.footer`
 const FooterDesc = styled.p`
   color: #000;
 `;
+const Clickbutton = styled.button`
+  color: red; 
+  padding: 3px;
+  margin: 4px;
+`;
 
 const Footer = () => {
     return (
         <FooterSection>
             <FooterDesc>copyright &copy; 2020 by Expat Journal Team 2gi</FooterDesc>
+            <Clickbutton onclick="">About</Clickbutton>
+            <Clickbutton onclick="">Marketing</Clickbutton>
+            <Clickbutton onclick="">FAQ</Clickbutton>
+            <Clickbutton onclick="">Login</Clickbutton>
+            <Clickbutton onclick="">Signup</Clickbutton>
         </FooterSection>
     )
 }
