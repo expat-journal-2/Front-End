@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
      <h1>Welcome to Expat Journal Team 2</h1>
-     <h2>We will be live in:</h2>
+     <h2>We will be live Friday 6 March 2020</h2>
      <Switch>
        <Route exact path='/sign-in' component={LoginPage} />
        <Route exact path='/sign-up' component={SignUpPage}/>
