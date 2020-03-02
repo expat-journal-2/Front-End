@@ -6,7 +6,7 @@ const FooterSection = styled.footer`
   padding: 10px 0;
 `;
 const FooterDesc = styled.p`
-  color: #888;
+  color: #000;
 `;
 
 const Footer = () => {
