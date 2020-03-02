@@ -12,7 +12,7 @@ const FooterDesc = styled.p`
 const Footer = () => {
     return (
         <FooterSection>
-            <FooterDesc>copyright &copy; 2020 by Expat Journal Team 2</FooterDesc>
+            <FooterDesc>copyright &copy; 2020 by Expat Journal Team 2gi</FooterDesc>
         </FooterSection>
     )
 }
