@@ -16,12 +16,12 @@ function App() {
     <div className="App">
      <h1>Welcome to Expat Journal Team 2</h1>
      <h2>We will be live Friday 6 March 2020</h2>
-     {/* <Switch>
+     <Switch>
        <Route exact path='/sign-in' component={Login} />
        <Route exact path='/sign-up' component={SignUp}/>
-       <PrivateRoute path='/' component={NavBar} />
+       {/* <PrivateRoute path='/' component={NavBar} /> */}
      </Switch>
-    <Route path='/' component={Footer} />  */}
+    {/* <Route path='/' component={Footer} />  */}
     </div>
   );
 }
