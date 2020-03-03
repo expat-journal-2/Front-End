@@ -1,3 +1,6 @@
+
+  
+
 import React from 'react';
 import styled from 'styled-components'
 import {
@@ -25,6 +28,7 @@ const FooterSection = styled.footer`
   cursor: pointer;
   }
 `;
+
 const FooterDesc = styled.p`
   color: #EAE7DC;
 `;

@@ -21,7 +21,7 @@ export const fetchStories = () => {
     return function(dispatch) {
         dispatch({ type: FETCH_STORY});
         axios
-          .get('https://expat-journal.herokuapp.com/stories')
+          .get('https://expat-journal.herokuapp.com/api/stories')
           .then(res => {
               console.log('date from story fetch', res.data)
               dispatch({ type: FETCH_STORY_SUCCESS, payload: res.data});
@@ -37,7 +37,7 @@ export const fetchStories = () => {
 export const addStory = add => dispatch => {
     dispatch({ type: ADD_STORY });
     axios
-      .post('get URL from BE', add)
+      .post('/api/stories', add)
       .then(res => {
           dispatch({ type: ADD_STORY_SUCCESS, payload: res.data});
       })

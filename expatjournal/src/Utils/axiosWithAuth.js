@@ -4,7 +4,7 @@ export const axiosWithAuth = () => {
     const token = window.localStorage.getItem('token');
 
     return axios.create({
-        baseURL: 'https://expat-journal.herokuapp.com/', //will need to update when dB and endpoints get published
+        baseURL: 'https://expat-journal.herokuapp.com/', 
         headers: {
             Authorization: token
         }
