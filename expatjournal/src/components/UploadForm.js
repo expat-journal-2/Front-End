@@ -11,9 +11,9 @@ const UploadForm = (props) => {
     const submitHandler = e => {
         e.preventDefault();
         //get info from BE
-        const {name, content, image_URL, location, author, date, user} = formInputs;
+        const {name, content, image_URL, location, author, date} = formInputs;
         //check with backend
-        props.addStory({name, content, image_URL, location, author, date, user});
+        props.addStory({name, content, image_URL, location, author, date});
         clearForm();
       //   props.history.push('/dashboard');
     }
