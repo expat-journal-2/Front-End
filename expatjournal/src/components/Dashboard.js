@@ -11,7 +11,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className='main'>
-                <div className='new-posts'> New posts from Expata</div>
+                <div className='new-posts'> New posts from Expats</div>
                 <div className='all-stories'>
                     {this.props.stories.map(story => {
                         return (

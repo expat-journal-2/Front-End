@@ -13,6 +13,7 @@ const Clickbutton = styled.button`
   color: red; 
   padding: 3px;
   margin: 4px;
+  cursor: pointer;
 `;
 
 const Footer = () => {
