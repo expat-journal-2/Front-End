@@ -4,9 +4,10 @@ import styled from 'styled-components'
 const NavSection = styled.header`
   text-align: center;
   padding: 10px 0;
-  Background: lightblue;
 `;
-
+const HeaderDesc = styled.p`
+  color: black;
+`;
 const Navbutton = styled.button`
   color: red; 
   padding: 3px;
@@ -16,6 +17,7 @@ const Navbutton = styled.button`
 const NavBar = () => {
     return (
         <NavSection>
+          <HeaderDesc>Expat Journal Team 2</HeaderDesc>
             <Navbutton onclick="">About</Navbutton>
             <Navbutton onclick="">Marketing</Navbutton>
             <Navbutton onclick="">FAQ</Navbutton>
