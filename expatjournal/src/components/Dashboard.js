@@ -19,9 +19,9 @@ class Dashboard extends Component {
                                 <div id={story.id} className='story'>
                                     <Link to={ `/stories/${story.id}`}>
                                         {''}
-                                        <img src={story.sImageUrl} /> 
+                                        <img src={story.image_URL} /> 
                                         {/* check naming conventions!! */}
-                                        <h1>{story.sName}</h1>
+                                        <h1>{story.name}</h1>
                                     </Link>
                                 </div>
                             </div>
