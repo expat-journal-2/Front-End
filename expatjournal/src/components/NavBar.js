@@ -43,9 +43,9 @@ const NavBar = () => {
           <Link to='/'> 
               <button className='nav-btn'>About</button>
             </Link>
-            <Link to='https://reverent-villani-9adcf1.netlify.com/' target="_blank"> 
-              <button className='nav-btn'>Marketing</button>
-            </Link>
+            <a href='https://reverent-villani-9adcf1.netlify.com/' target="_blank"> 
+              <button className='ClickButton'>Marketing</button>
+            </a>
             <Link to='/'> 
               <button className='nav-btn'>FAQ</button>
             </Link>
