@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import logo from '../images/logo.jpg';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,27 +16,34 @@ const NavSection = styled.header`
 
   .nav-btn{
     color: #EAE7DC; 
-  padding: 3px;
-  margin: 4px;
-  background: #E98074;
-  cursor: pointer;
+    padding: 3px;
+    margin: 4px;
+    background: #E98074;
+    cursor: pointer;
   }
 `;
 const HeaderDesc = styled.p`
   color: black;
 `;
 
+const NavBarImg = styled.div`
+    padding: 3px;
+    margin: 4px;
+    cursor: pointer;
+`;
 
 const NavBar = () => {
     return (
-        <NavSection>
-          
-          
+    <NavSection>
+      <NavBarImg>
+           <img src="../images/log.jpg" alt="journal"/>
+      </NavBarImg>
+        
           <HeaderDesc>Expat Journal Team 2</HeaderDesc>
           <Link to='/'> 
               <button className='nav-btn'>About</button>
             </Link>
-            <Link to='https://reverent-villani-9adcf1.netlify.com/'> 
+            <Link to='https://reverent-villani-9adcf1.netlify.com/' target="_blank"> 
               <button className='nav-btn'>Marketing</button>
             </Link>
             <Link to='/'> 
