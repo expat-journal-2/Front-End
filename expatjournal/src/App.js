@@ -46,6 +46,7 @@ function App() {
        { <PrivateRoute path='/' component={NavBar} /> }
      </Switch>
     { <Route path='/' component={Footer} />  }
+
      </Router>
     </div>
     </StyledApp>

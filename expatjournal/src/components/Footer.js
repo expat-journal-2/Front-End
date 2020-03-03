@@ -1,3 +1,6 @@
+
+  
+
 import React from 'react';
 import styled from 'styled-components'
 import {
@@ -25,6 +28,7 @@ const ClickButton = styled.button`
   padding: 3px;
   margin: 4px;
   background: #E98074;
+  cursor: pointer;
 `;
 
 const Footer = () => {
