@@ -81,7 +81,7 @@ const UploadForm = (props) => {
                 />
             </div> 
             <div className='upload-btns'>
-              <button className='upload-btn' form='upload-form type='submit>Publish</button>  
+              <button className='upload-btn' form='upload-form' type='submit'>Publish</button>  
             </div>
         </section>
     )    

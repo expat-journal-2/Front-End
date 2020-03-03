@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { axiosWithAuth } from '../Utils/axiosWithAuth';
+import { editStory } from '../actions';
+import { connect } from 'react-redux';
 
 const initialItem = {
     name: '',
@@ -83,6 +85,11 @@ const EditForm = props => {
             placeholder="Enter your story"
             />
           </form>  
+          <div>
+              <button className='upload-btn' type='submit'>Submit Edits</button>
+          </div> 
         </div>
-    )
-}
+    );
+};
+
+export default connect(null, { editStory })(EditForm);
