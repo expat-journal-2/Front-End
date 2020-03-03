@@ -25,10 +25,13 @@ const EditForm = props => {
         }
     }, [props.items, id]);
 
-//     const changeHandler = e => {
-//         e.persist();
+    const handleChanges = e => {
+       this.setItem({
+           ...item,
+           [e.target.name]: e.target.value
+       })
         
-//     }
+    }
     const handleSubmit = e => {
         axiosWithAuth()
         .put(`/api/stories/${id}`, item)

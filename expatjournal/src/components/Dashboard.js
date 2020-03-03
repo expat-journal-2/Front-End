@@ -12,10 +12,10 @@ class Dashboard extends Component {
     render() {
         return (
             <div className='main'>
-                <UploadForm />
                 <div className='new-posts'> New posts from Expats</div>
                 <div className='all-stories'>
                     {this.props.stories.map(story => {
+                        console.log(story);
                         return (
                             <div>
                                 <div id={story.id} className='story'>
@@ -29,8 +29,8 @@ class Dashboard extends Component {
                             </div>
                         );
                     })}
-                    
                 </div>
+                <UploadForm component={UploadForm}/>
             </div>
         );
     }
