@@ -1,28 +1,60 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import logo from '../images/logo.jpg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 
 const NavSection = styled.header`
   text-align: center;
   padding: 10px 0;
+
+  .nav-btn{
+    color: #EAE7DC; 
+    padding: 3px;
+    margin: 4px;
+    background: #E98074;
+    cursor: pointer;
+  }
 `;
 const HeaderDesc = styled.p`
   color: black;
 `;
-const Navbutton = styled.button`
-  color: red; 
-  padding: 3px;
-  margin: 4px;
+
+const NavBarImg = styled.div`
+    padding: 3px;
+    margin: 4px;
+    cursor: pointer;
 `;
 
 const NavBar = () => {
     return (
-        <NavSection>
+    <NavSection>
+      <NavBarImg>
+           <img src="../images/log.jpg" alt="journal"/>
+      </NavBarImg>
+        
           <HeaderDesc>Expat Journal Team 2</HeaderDesc>
-            <Navbutton onclick="">About</Navbutton>
-            <Navbutton onclick="">Marketing</Navbutton>
-            <Navbutton onclick="">FAQ</Navbutton>
-            <Navbutton onclick="">Login</Navbutton>
-            <Navbutton onclick="">Signup</Navbutton>
+          <Link to='/'> 
+              <button className='nav-btn'>About</button>
+            </Link>
+            <a href='https://reverent-villani-9adcf1.netlify.com/' target="_blank"> 
+              <button className='nav-btn'>Marketing</button>
+            </a>
+            <Link to='/'> 
+              <button className='nav-btn'>FAQ</button>
+            </Link>
+            <Link to='/sign-in'> 
+              <button className='nav-btn'>Login</button>
+            </Link>
+            <Link to='/sign-up'> 
+              <button className='nav-btn'>Signup</button>
+            </Link>
         </NavSection>
     )
 }

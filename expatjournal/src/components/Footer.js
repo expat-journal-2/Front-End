@@ -1,6 +1,3 @@
-
-  
-
 import React from 'react';
 import styled from 'styled-components'
 import {
@@ -19,17 +16,20 @@ const FooterSection = styled.footer`
   left: 0;
   right: 0;
   bottom: 0;
-`;
-const FooterDesc = styled.p`
-  color: #EAE7DC;
-`;
-const ClickButton = styled.button`
-  color: #EAE7DC; 
+
+  .ClickButton{
+    color: #EAE7DC; 
   padding: 3px;
   margin: 4px;
   background: #E98074;
   cursor: pointer;
+  }
 `;
+
+const FooterDesc = styled.p`
+  color: #EAE7DC;
+`;
+
 
 const Footer = () => {
     return (
@@ -38,9 +38,9 @@ const Footer = () => {
             <Link to='/'> 
               <button className='ClickButton'>About</button>
             </Link>
-            <Link to='/'> 
+            <a href='https://reverent-villani-9adcf1.netlify.com/' target="_blank"> 
               <button className='ClickButton'>Marketing</button>
-            </Link>
+            </a>
             <Link to='/'> 
               <button className='ClickButton'>FAQ</button>
             </Link>
