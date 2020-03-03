@@ -19,17 +19,20 @@ const FooterSection = styled.footer`
   left: 0;
   right: 0;
   bottom: 0;
-`;
-const FooterDesc = styled.p`
-  color: #EAE7DC;
-`;
-const ClickButton = styled.button`
-  color: #EAE7DC; 
+
+  .ClickButton{
+    color: #EAE7DC; 
   padding: 3px;
   margin: 4px;
   background: #E98074;
   cursor: pointer;
+  }
 `;
+
+const FooterDesc = styled.p`
+  color: #EAE7DC;
+`;
+
 
 const Footer = () => {
     return (
