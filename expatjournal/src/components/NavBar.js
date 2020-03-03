@@ -14,9 +14,11 @@ const NavSection = styled.header`
   padding: 10px 0;
 
   .nav-btn{
-    color: red; 
+    color: #EAE7DC; 
   padding: 3px;
   margin: 4px;
+  background: #E98074;
+  cursor: pointer;
   }
 `;
 const HeaderDesc = styled.p`
@@ -27,11 +29,13 @@ const HeaderDesc = styled.p`
 const NavBar = () => {
     return (
         <NavSection>
+          
+          
           <HeaderDesc>Expat Journal Team 2</HeaderDesc>
           <Link to='/'> 
               <button className='nav-btn'>About</button>
             </Link>
-            <Link to='/'> 
+            <Link to='https://reverent-villani-9adcf1.netlify.com/'> 
               <button className='nav-btn'>Marketing</button>
             </Link>
             <Link to='/'> 
