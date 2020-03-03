@@ -8,7 +8,7 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import main from './images/main.jpg'
 import PrivateRoute from './components/PrivateRoute.js';
-
+import UploadForm from './components/UploadForm';
 import NavBar from './components/NavBar.js';
 import Footer from './components/Footer.js';
 const StyledApp = styled.div`
@@ -39,7 +39,7 @@ function App() {
      <Link to='/sign-in'> 
      <button className='main-btn'>Sign In</button>
      </Link>
-    
+    <UploadForm component={UploadForm}/>
      <Router>
      <Switch>
        <Route exact path='/sign-in' component={Login} />

@@ -11,11 +11,11 @@ const UploadForm = (props) => {
     const submitHandler = e => {
         e.preventDefault();
         //get info from BE
-        const {name, content} = formInputs;
+        const {name, content, image_URL, location, author, date, user} = formInputs;
         //check with backend
         props.addStory({name, content, image_URL, location, author, date, user});
         clearForm();
-        props.history.push('/dashboard');
+      //   props.history.push('/dashboard');
     }
 
     //do we want form checking ??
@@ -24,7 +24,7 @@ const UploadForm = (props) => {
         <section className='upload-container'>
           <div className='upload-top'>
              <div className='upload-amage-container'>
-                <img src={uploadImg} alt='upload' /> 
+                {/* <img src={uploadImg} alt='upload' />  */}
                 <p> Upload image</p>
              </div> 
 
