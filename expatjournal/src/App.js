@@ -43,9 +43,9 @@ function App() {
      <Switch>
        <Route exact path='/sign-in' component={Login} />
        <Route exact path='/sign-up' component={SignUp}/>
-       { <PrivateRoute path='/' component={NavBar} /> }
+        <PrivateRoute path='/' component={NavBar} /> 
      </Switch>
-    { <Route path='/' component={Footer} />  }
+        <Route path='/' component={Footer} />  
      </Router>
     </div>
     </StyledApp>
