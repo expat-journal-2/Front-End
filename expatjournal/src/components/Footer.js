@@ -41,9 +41,9 @@ const Footer = () => {
             <Link to='/'> 
               <button className='ClickButton'>About</button>
             </Link>
-            <Link to='/'> 
+            <a href='https://reverent-villani-9adcf1.netlify.com/' target="_blank"> 
               <button className='ClickButton'>Marketing</button>
-            </Link>
+            </a>
             <Link to='/'> 
               <button className='ClickButton'>FAQ</button>
             </Link>
