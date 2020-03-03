@@ -6,16 +6,16 @@ import useForm from '../Utils/useForm';
 
 const UploadForm = (props) => {
     const [ formInputs, handleChanges, clearForm ] = useForm();
-    const user = localStorage.getItem('username');
+   //  const user = localStorage.getItem('username');
 
     const submitHandler = e => {
         e.preventDefault();
         //get info from BE
-        const {name, content} = formInputs;
+        const {name, content, image_URL, location, author, date} = formInputs;
         //check with backend
-        props.addStory({name, content, image_URL, location, author, date, user});
+        props.addStory({name, content, image_URL, location, author, date});
         clearForm();
-        props.history.push('/dashboard');
+      //   props.history.push('/dashboard');
     }
 
     //do we want form checking ??
@@ -24,7 +24,7 @@ const UploadForm = (props) => {
         <section className='upload-container'>
           <div className='upload-top'>
              <div className='upload-amage-container'>
-                <img src={uploadImg} alt='upload' /> 
+                {/* <img src={uploadImg} alt='upload' />  */}
                 <p> Upload image</p>
              </div> 
 
@@ -81,7 +81,7 @@ const UploadForm = (props) => {
                 />
             </div> 
             <div className='upload-btns'>
-              <button className='upload-btn' form='upload-form type='submit>Publish</button>  
+              <button className='upload-btn' form='upload-form' type='submit'>Publish</button>  
             </div>
         </section>
     )    

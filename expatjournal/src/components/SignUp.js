@@ -15,7 +15,7 @@ export default function SignUp(props) {
             console.log(res);
             localStorage.setItem('token', res.data.token);
             localStorage.setItem('username', username);
-            props.history.push('/dashboard');
+            props.history.push('/sign-in');
         })
         .catch(err => console.log(err));
 

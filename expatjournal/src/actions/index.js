@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { axiosWithAuth } from '../Utils/axiosWithAuth';
 //may need to update to axiosWithAuth
 //may need to add/remove some of these actions/states
 
@@ -23,6 +24,7 @@ export const fetchStories = () => {
         axios
           .get('https://expat-journal.herokuapp.com/api/stories')
           .then(res => {
+              console.log(res);
               console.log('data from story fetch', res.data)
               dispatch({ type: FETCH_STORY_SUCCESS, payload: res.data});
           })
@@ -36,8 +38,8 @@ export const fetchStories = () => {
 
 export const addStory = add => dispatch => {
     dispatch({ type: ADD_STORY });
-    axios
-      .post('/api/stories', add)
+    axiosWithAuth()
+      .post('https://expat-journal.herokuapp.com/api/stories', add)
       .then(res => {
           dispatch({ type: ADD_STORY_SUCCESS, payload: res.data});
       })
