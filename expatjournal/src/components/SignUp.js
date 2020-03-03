@@ -9,12 +9,12 @@ export default function SignUp(props) {
 
     const submitHandler = e => {
         e.preventDefault();
-        const{ name, password } = formInfo;
-        axios.post('https://expat-journal.herokuapp.com/api/auth', { name, password })
+        const{ username, password } = formInfo;
+        axios.post('https://expat-journal.herokuapp.com/api/auth/register', { username, password })
         .then(res => {
             console.log(res);
             localStorage.setItem('token', res.data.token);
-            localStorage.setItem('username', name);
+            localStorage.setItem('username', username);
             props.history.push('/dashboard');
         })
         .catch(err => console.log(err));
@@ -32,9 +32,9 @@ export default function SignUp(props) {
                 <input
                   className={formInfo.error ? 'error' : ''}
                   type='text'
-                  name='name'
+                  name='username'
                   placeholder='Enter a user name'
-                  value={formInfo.name || ''}
+                  value={formInfo.username || ''}
                   onChange={handleChanges}
                   required
                 />
@@ -63,6 +63,7 @@ export default function SignUp(props) {
                   className={formInfo.error ? 'error' : ''}
                   type='password'
                   name='confirmPassword' 
+                  placeholder='Confirm your password'
                   value={formInfo.confirmPassword || ''}
                   onChange={handleChanges}
                   required

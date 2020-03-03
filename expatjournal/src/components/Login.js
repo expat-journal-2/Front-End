@@ -20,7 +20,7 @@ class Login extends React.Component {
         e.preventDefault();
         axiosWithAuth()
         //get stub from BE
-          .post('', this.state.credentials)
+          .post('/api/auth/login', this.state.credentials)
           .then(res => {
               localStorage.setItem('token', res.data.token);
               localStorage.setItem('username', this.state.credentials.username);
