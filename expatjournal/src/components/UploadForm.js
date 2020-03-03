@@ -11,9 +11,9 @@ const UploadForm = (props) => {
     const submitHandler = e => {
         e.preventDefault();
         //get info from BE
-        const {sName, sContent} = formInputs;
+        const {name, content} = formInputs;
         //check with backend
-        props.addStory({sName, sContent, sImageUrl: placeholderImg, user});
+        props.addStory({name, content, image_URL, location, author, date, user});
         clearForm();
         props.history.push('/dashboard');
     }
@@ -34,10 +34,10 @@ const UploadForm = (props) => {
                     <label>Title</label>
                     <input 
                     type='text' 
-                    id='title'
-                    name='sName'
+                    id='name'
+                    name='name'
                     required
-                    value={formInputs.sName || ''}
+                    value={formInputs.name || ''}
                     onChange={handleChanges}
                     placeholder="Enter a title"
                     />
@@ -48,22 +48,22 @@ const UploadForm = (props) => {
                     <input 
                     type='text' 
                     id='location'
-                    name='sCountry'
-                    value={formInputs.sCountry || ''}
+                    name='location'
+                    value={formInputs.location || ''}
                     onChange={handleChanges}
                     placeholder="Enter a location"
                     />
                  </div> 
-                    {/* // Do we want this or a description on how we felt (mybe a dropdown??) */}
-                 <div className='input-container emoji'>
-                    <label>Choose an Emoji for this day</label>
+                    
+                 <div className='input-container date'>
+                    <label>Choose an date for this trip</label>
                     <input 
                     type='text' 
-                    id='emoji'
-                    name='emoji'
-                    value={formInputs.emoji || ''}
+                    id='date'
+                    name='date'
+                    value={formInputs.date || ''}
                     onChange={handleChanges}
-                    placeholder="Enter an emoji"
+                    placeholder="Enter an date"
                     />
                  </div>
              </form>
@@ -73,9 +73,9 @@ const UploadForm = (props) => {
                 <textarea 
                 type='text' 
                 id='content'
-                name='sContent'
+                name='content'
                 required
-                value={formInputs.sContent || ''}
+                value={formInputs.content || ''}
                 onChange={handleChanges}
                 placeholder="Enter your story"
                 />
