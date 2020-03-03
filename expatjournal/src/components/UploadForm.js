@@ -6,7 +6,7 @@ import useForm from '../Utils/useForm';
 
 const UploadForm = (props) => {
     const [ formInputs, handleChanges, clearForm ] = useForm();
-    const user = localStorage.getItem('username');
+   //  const user = localStorage.getItem('username');
 
     const submitHandler = e => {
         e.preventDefault();
