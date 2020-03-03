@@ -9,9 +9,10 @@ export default function SignUp(props) {
 
     const submitHandler = e => {
         e.preventDefault();
-        const{ username, password } = formInfo;
-        axios.post('https://expat-journal.herokuapp.com/', { username, password })
+        const{ username, password, email } = formInfo;
+        axios.post('https://expat-journal.herokuapp.com/api/auth/register', { username, password, email })
         .then(res => {
+            console.log(res);
             localStorage.setItem('token', res.data.token);
             localStorage.setItem('username', username);
             props.history.push('/dashboard');
@@ -62,6 +63,7 @@ export default function SignUp(props) {
                   className={formInfo.error ? 'error' : ''}
                   type='password'
                   name='confirmPassword' 
+                  placeholder='Confirm your password'
                   value={formInfo.confirmPassword || ''}
                   onChange={handleChanges}
                   required
