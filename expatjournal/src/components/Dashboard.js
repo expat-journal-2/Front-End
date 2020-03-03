@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStories } from '../actions/';
 import { Link } from 'react-router-dom';
+import UploadForm from './UploadForm';
 
 class Dashboard extends Component {
     componentDidMount() {
@@ -11,6 +12,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className='main'>
+                <UploadForm />
                 <div className='new-posts'> New posts from Expats</div>
                 <div className='all-stories'>
                     {this.props.stories.map(story => {

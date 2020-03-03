@@ -11,7 +11,6 @@ import PrivateRoute from './components/PrivateRoute.js';
 
 import NavBar from './components/NavBar.js';
 import Footer from './components/Footer.js';
-
 const StyledApp = styled.div`
   background-image: url(${main});
   background-size: cover;
@@ -40,6 +39,7 @@ function App() {
      <Link to='/sign-in'> 
      <button className='main-btn'>Sign In</button>
      </Link>
+    
      <Router>
      <Switch>
        <Route exact path='/sign-in' component={Login} />
