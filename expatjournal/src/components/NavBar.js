@@ -12,33 +12,42 @@ import {
 
 const NavSection = styled.header`
   text-align: center;
-  padding: 10px 0;
+  
 
   .nav-btn{
     color: #EAE7DC; 
     padding: 3px;
     margin: 4px;
-    background: #E98074;
+    background: #E85A4F;
     cursor: pointer;
+    border-radius: 9px;
   }
 `;
 const HeaderDesc = styled.p`
-  color: black;
+  color: #E85A4F;
+  font-size: 1.2em;
 `;
 
 const NavBarImg = styled.div`
-    padding: 3px;
-    margin: 4px;
+    
     cursor: pointer;
 `;
+
 
 const NavBar = () => {
     return (
     <NavSection>
       <NavBarImg>
-           <img src="../images/logo.jpg" alt="journal"/>
+
+           <img src={logo} alt="journal"/>
+<<<<<<< HEAD
+        </NavBarImg>
+
+=======
+
       </NavBarImg>
         
+>>>>>>> b62ef717fb6e92eb83b07899201ab77f3135b127
           <HeaderDesc>Expat Journal Team 2</HeaderDesc>
           <Link to='/'> 
               <button className='nav-btn'>About</button>

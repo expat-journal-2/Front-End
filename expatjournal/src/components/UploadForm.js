@@ -18,7 +18,7 @@ const StylesBtn = styled.button`
 const StylesUpld = styled.button`
   text-align: center;
   color: #E85A4F; 
-  padding: 3px;
+  padding: 0px;
   margin: 4px;
   background: #EAE7DC;
   cursor: pointer;
@@ -33,6 +33,7 @@ const StylesContainer = styled.section`
   padding: 2px;
   margin: 2px;
 `;
+
 
 const UploadForm = (props) => {
     const [ formInputs, handleChange, clearForm ] = useForm();
@@ -57,7 +58,9 @@ const UploadForm = (props) => {
              <div className='upload-image-container'>
                 {/* <img src={uploadImg} alt='upload' />  */}
                 {/* <p> Upload image</p> */}
+
              </div> 
+             </StylesUpld>
 
              <form id='upload-form' onSubmit={submitHandler} className='upload-form'>
                  {/* put buttons/radio buttons here for public/private post option */}
@@ -87,7 +90,7 @@ const UploadForm = (props) => {
                  </div> 
                     
                  <div className='input-container date'>
-                    <label>Choose an date for this trip</label>
+                    <label>Choose a date for this trip</label>
                     <input 
                     type='text' 
                     id='date'
@@ -110,8 +113,10 @@ const UploadForm = (props) => {
                 onChange={handleChange}
                 placeholder="Enter your story"
                 />
-            </div>
-            <StylesBtn> 
+
+            </div> 
+            <StylesBtn>
+
             <div className='upload-btns'>
               <button className='upload-btn' form='upload-form' type='submit'>Publish</button>  
             </div>
