@@ -22,7 +22,7 @@ const FooterSection = styled.footer`
     color: #EAE7DC; 
   padding: 3px;
   margin: 4px;
-  background: #E98074;
+  background: #E85A4F;
   cursor: pointer;
   }
 `;

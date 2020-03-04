@@ -18,12 +18,13 @@ const NavSection = styled.header`
     color: #EAE7DC; 
     padding: 3px;
     margin: 4px;
-    background: #E98074;
+    background: #E85A4F;
     cursor: pointer;
   }
 `;
 const HeaderDesc = styled.p`
-  color: black;
+  color: #E85A4F;
+  font-size: 1.2em;
 `;
 
 const NavBarImg = styled.div`
