@@ -12,7 +12,7 @@ import {
 
 const NavSection = styled.header`
   text-align: center;
-  padding: 4px 0;
+  
 
   .nav-btn{
     color: #EAE7DC; 
@@ -33,15 +33,21 @@ const NavBarImg = styled.div`
     cursor: pointer;
 `;
 
+
 const NavBar = () => {
     return (
     <NavSection>
       <NavBarImg>
 
            <img src={logo} alt="journal"/>
+<<<<<<< HEAD
+        </NavBarImg>
+
+=======
 
       </NavBarImg>
         
+>>>>>>> b62ef717fb6e92eb83b07899201ab77f3135b127
           <HeaderDesc>Expat Journal Team 2</HeaderDesc>
           <Link to='/'> 
               <button className='nav-btn'>About</button>
