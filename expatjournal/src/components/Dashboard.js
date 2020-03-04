@@ -19,7 +19,7 @@ class Dashboard extends Component {
                         return (
                             <div>
                                 <div id={story.id} className='story'>
-                                    <Link to={ `/stories/${story.id}`}>
+                                    <Link to={ `/api/stories/${story.id}`}>
                                         {''}
                                         <img src={story.image_URL} /> 
                                         {/* check naming conventions!! */}
