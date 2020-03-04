@@ -36,7 +36,7 @@ const NavBar = () => {
     return (
     <NavSection>
       <NavBarImg>
-           <img src="../images/log.jpg" alt="journal"/>
+           <img src="../images/logo.jpg" alt="journal"/>
       </NavBarImg>
         
           <HeaderDesc>Expat Journal Team 2</HeaderDesc>
