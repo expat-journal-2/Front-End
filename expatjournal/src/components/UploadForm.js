@@ -18,7 +18,7 @@ const StylesBtn = styled.button`
 const StylesUpld = styled.button`
   text-align: center;
   color: #E85A4F; 
-  padding: 3px;
+  padding: 0px;
   margin: 4px;
   background: #EAE7DC;
   cursor: pointer;
