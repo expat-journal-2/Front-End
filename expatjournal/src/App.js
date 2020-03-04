@@ -15,7 +15,7 @@ import Footer from './components/Footer.js';
 const StyledApp = styled.div`
   background-image: url(${main});
   background-size: cover;
-  height: 100vh;
+  // height: 100vh;
   opacity: 0.8;
 
   // .main-btn {

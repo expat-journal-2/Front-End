@@ -39,7 +39,7 @@ export const fetchStories = () => {
 export const addStory = add => dispatch => {
     dispatch({ type: ADD_STORY });
     axiosWithAuth()
-      .post('https://expat-journal.herokuapp.com/api/stories', add)
+      .post('/api/stories', add)
       .then(res => {
           dispatch({ type: ADD_STORY_SUCCESS, payload: res.data});
       })
