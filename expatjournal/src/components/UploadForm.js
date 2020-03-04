@@ -15,7 +15,7 @@ const UploadForm = (props) => {
         //check with backend
         props.addStory({name, content, image_URL, location, author, date});
         clearForm();
-      //   props.history.push('/dashboard');
+        props.history.push('/dashboard');
     }
 
     //do we want form checking ??

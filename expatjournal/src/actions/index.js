@@ -24,8 +24,8 @@ export const fetchStories = () => {
         axios
           .get('https://expat-journal.herokuapp.com/api/stories')
           .then(res => {
-              console.log(res);
-              console.log('data from story fetch', res.data)
+            //   console.log(res);
+            //   console.log('data from story fetch', res.data)
               dispatch({ type: FETCH_STORY_SUCCESS, payload: res.data});
           })
           .catch(() => {
