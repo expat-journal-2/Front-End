@@ -3,6 +3,27 @@ import React from 'react';
 import { addStory } from '../actions';
 import { connect } from 'react-redux';
 import useForm from '../Utils/useForm';
+import styled from 'styled-components';
+
+const StylesBtn = styled.button`
+  text-align: center;
+  color: #EAE7DC; 
+  padding: 3px;
+  margin: 4px;
+  background: #E98074;
+  cursor: pointer;
+`;
+
+const StylesContainer = styled.section`
+  text-align: center;
+  color: #EAE7DC; 
+  cursor: pointer;
+  font-size: 1.3em;
+  padding: 2px;
+  margin: 2px;
+`;
+
+
 
 const UploadForm = (props) => {
     const [ formInputs, handleChanges, clearForm ] = useForm();
@@ -21,11 +42,12 @@ const UploadForm = (props) => {
     //do we want form checking ??
 
     return (
+      <StylesContainer>
         <section className='upload-container'>
           <div className='upload-top'>
              <div className='upload-amage-container'>
                 {/* <img src={uploadImg} alt='upload' />  */}
-                <p> Upload image</p>
+                <p> Upload Image</p>
              </div> 
 
              <form id='upload-form' onSubmit={submitHandler} className='upload-form'>
@@ -56,7 +78,7 @@ const UploadForm = (props) => {
                  </div> 
                     
                  <div className='input-container date'>
-                    <label>Choose an date for this trip</label>
+                    <label>Choose a date for this trip</label>
                     <input 
                     type='text' 
                     id='date'
@@ -80,10 +102,13 @@ const UploadForm = (props) => {
                 placeholder="Enter your story"
                 />
             </div> 
+            <StylesBtn>
             <div className='upload-btns'>
               <button className='upload-btn' form='upload-form' type='submit'>Publish</button>  
             </div>
+            </StylesBtn>
         </section>
+        </StylesContainer>
     )    
 }
 

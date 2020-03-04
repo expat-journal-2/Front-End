@@ -8,6 +8,7 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
+import logo from '../images/logo.jpg';
 
 const FooterSection = styled.footer`
   text-align: center;
