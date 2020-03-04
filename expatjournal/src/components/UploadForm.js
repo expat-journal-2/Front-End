@@ -37,7 +37,7 @@ const StylesContainer = styled.section`
 
 
 const UploadForm = (props) => {
-    const [ formInputs, handleChanges, clearForm ] = useForm();
+    const [ formInputs, handleChange, clearForm ] = useForm();
    //  const user = localStorage.getItem('username');
 
     const submitHandler = e => {
@@ -73,7 +73,7 @@ const UploadForm = (props) => {
                     name='name'
                     required
                     value={formInputs.name || ''}
-                    onChange={handleChanges}
+                    onChange={handleChange}
                     placeholder="Enter a title"
                     />
                  </div> 
@@ -85,7 +85,7 @@ const UploadForm = (props) => {
                     id='location'
                     name='location'
                     value={formInputs.location || ''}
-                    onChange={handleChanges}
+                    onChange={handleChange}
                     placeholder="Enter a location"
                     />
                  </div> 
@@ -97,7 +97,7 @@ const UploadForm = (props) => {
                     id='date'
                     name='date'
                     value={formInputs.date || ''}
-                    onChange={handleChanges}
+                    onChange={handleChange}
                     placeholder="Enter an date"
                     />
                  </div>
@@ -111,7 +111,7 @@ const UploadForm = (props) => {
                 name='content'
                 required
                 value={formInputs.content || ''}
-                onChange={handleChanges}
+                onChange={handleChange}
                 placeholder="Enter your story"
                 />
             </div> 
