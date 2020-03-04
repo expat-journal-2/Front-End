@@ -10,7 +10,16 @@ const StylesBtn = styled.button`
   color: #EAE7DC; 
   padding: 3px;
   margin: 4px;
-  background: #E98074;
+  background: #E85A4F;
+  cursor: pointer;
+`;
+
+const StylesUpld = styled.button`
+  text-align: center;
+  color: #E85A4F; 
+  padding: 3px;
+  margin: 4px;
+  background: #EAE7DC;
   cursor: pointer;
 `;
 
@@ -45,10 +54,12 @@ const UploadForm = (props) => {
       <StylesContainer>
         <section className='upload-container'>
           <div className='upload-top'>
+          <StylesUpld>
              <div className='upload-amage-container'>
                 {/* <img src={uploadImg} alt='upload' />  */}
                 <p> Upload Image</p>
              </div> 
+             </StylesUpld>
 
              <form id='upload-form' onSubmit={submitHandler} className='upload-form'>
                  {/* put buttons/radio buttons here for public/private post option */}
