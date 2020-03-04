@@ -60,7 +60,7 @@ const UploadForm = (props) => {
                 {/* <p> Upload image</p> */}
 
              </div> 
-             </StylesUpld>
+             {/* </StylesUpld> */}
 
              <form id='upload-form' onSubmit={submitHandler} className='upload-form'>
                  {/* put buttons/radio buttons here for public/private post option */}
