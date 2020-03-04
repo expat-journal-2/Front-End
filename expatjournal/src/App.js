@@ -18,14 +18,14 @@ const StyledApp = styled.div`
   height: 100vh;
   opacity: 0.8;
 
-  .main-btn {
-    border: 2px solid white;
-    border-radius: 5px;
-    padding: 1% 2%;
-    margin: 2%;
-    cursor: pointer;
-  }
-  `;
+  // .main-btn {
+  //   border: 2px solid white;
+  //   border-radius: 5px;
+  //   padding: 1% 2%;
+  //   margin: 2%;
+  //   cursor: pointer;
+  // }
+  // `;
 
 function App() {
   return (
@@ -34,12 +34,12 @@ function App() {
     <div className="App">
      <h1>Welcome to Expat Journal Team 2</h1>
      <h2>We will be live Friday 6 March 2020</h2>
-      <Link to='/sign-up'>
+      {/* <Link to='/sign-up'>
      <button className='main-btn'>Sign up</button> 
      </Link>
      <Link to='/sign-in'> 
      <button className='main-btn'>Sign In</button>
-     </Link>
+     </Link> */}
     {/* <UploadForm component={UploadForm}/> */}
     <Dashboard component={Dashboard} />
      <Router>
