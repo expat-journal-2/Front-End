@@ -24,6 +24,7 @@ const FooterSection = styled.footer`
   margin: 4px;
   background: #E85A4F;
   cursor: pointer;
+  border-radius: 9px;
   }
 `;
 

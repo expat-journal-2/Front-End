@@ -20,6 +20,7 @@ const NavSection = styled.header`
     margin: 4px;
     background: #E85A4F;
     cursor: pointer;
+    border-radius: 9px;
   }
 `;
 const HeaderDesc = styled.p`
