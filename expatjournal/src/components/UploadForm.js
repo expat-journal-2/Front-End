@@ -35,7 +35,6 @@ const StylesContainer = styled.section`
 `;
 
 
-
 const UploadForm = (props) => {
     const [ formInputs, handleChange, clearForm ] = useForm();
    //  const user = localStorage.getItem('username');
@@ -56,10 +55,10 @@ const UploadForm = (props) => {
       <StylesContainer>
         <section className='upload-container'>
           <div className='upload-top'>
-          <StylesUpld>
-             <div className='upload-amage-container'>
+             <div className='upload-image-container'>
                 {/* <img src={uploadImg} alt='upload' />  */}
-                <p> Upload Image</p>
+                {/* <p> Upload image</p> */}
+
              </div> 
              </StylesUpld>
 
@@ -114,8 +113,10 @@ const UploadForm = (props) => {
                 onChange={handleChange}
                 placeholder="Enter your story"
                 />
+
             </div> 
             <StylesBtn>
+
             <div className='upload-btns'>
               <button className='upload-btn' form='upload-form' type='submit'>Publish</button>  
             </div>
