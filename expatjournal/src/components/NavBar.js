@@ -37,7 +37,9 @@ const NavBar = () => {
     return (
     <NavSection>
       <NavBarImg>
+
            <img src={logo} alt="journal"/>
+
       </NavBarImg>
         
           <HeaderDesc>Expat Journal Team 2</HeaderDesc>
