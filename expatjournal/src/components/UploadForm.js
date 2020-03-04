@@ -12,6 +12,7 @@ const StylesBtn = styled.button`
   margin: 4px;
   background: #E85A4F;
   cursor: pointer;
+  border-radius: 9px;
 `;
 
 const StylesUpld = styled.button`
@@ -21,6 +22,7 @@ const StylesUpld = styled.button`
   margin: 4px;
   background: #EAE7DC;
   cursor: pointer;
+  border-radius: 9px;
 `;
 
 const StylesContainer = styled.section`
