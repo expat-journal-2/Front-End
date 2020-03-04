@@ -42,9 +42,9 @@ const UploadForm = (props) => {
     const submitHandler = e => {
         e.preventDefault();
         //get info from BE
-        const {name, content, image_URL, location, author, date} = formInputs;
+        const {name, content, image_URL, location, author, date, user_id} = formInputs;
         //check with backend
-        props.addStory({name, content, image_URL, location, author, date});
+        props.addStory({name, content, image_URL, location, author, date, user_id});
         clearForm();
       //   props.history.push('/dashboard');
     }
@@ -60,7 +60,7 @@ const UploadForm = (props) => {
                 {/* <p> Upload image</p> */}
 
              </div> 
-             </StylesUpld>
+             {/* </StylesUpld> */}
 
              <form id='upload-form' onSubmit={submitHandler} className='upload-form'>
                  {/* put buttons/radio buttons here for public/private post option */}
@@ -77,7 +77,7 @@ const UploadForm = (props) => {
                     />
                  </div> 
 
-                 <div className='input-container country'>
+                 {/* <div className='input-container country'>
                     <label>City/Town, State, Country</label>
                     <input 
                     type='text' 
@@ -99,9 +99,22 @@ const UploadForm = (props) => {
                     onChange={handleChange}
                     placeholder="Enter an date"
                     />
+                 </div> */}
+
+                 <div className='input-container user_id'>
+                    <label>Choose a date for this trip</label>
+                    <input 
+                    type='integer' 
+                    id='user_id'
+                    name='user_id'
+                    required
+                    value={formInputs.user_id || ''}
+                    onChange={handleChange}
+                    placeholder="Enter your user id"
+                    />
                  </div>
-             </form>
-            </div> 
+            
+           
             <div className='upload-bottom'>
               <label>Your amazing story goes here</label>
                 <textarea 
@@ -114,6 +127,8 @@ const UploadForm = (props) => {
                 placeholder="Enter your story"
                 />
 
+            </div> 
+            </form>
             </div> 
             <StylesBtn>
 

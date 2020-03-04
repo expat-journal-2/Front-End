@@ -40,7 +40,9 @@ const NavBar = () => {
       <NavBarImg>
            <img src={logo} alt="journal"/>
         </NavBarImg>
-          <HeaderDesc>Expat Journal Team 2</HeaderDesc>
+      
+      
+      <HeaderDesc>Expat Journal Team 2</HeaderDesc>
           <Link to='/'> 
               <button className='nav-btn'>About</button>
             </Link>
