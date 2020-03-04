@@ -28,7 +28,7 @@ const StyledApp = styled.div`
   // `;
 
 function App() {
-  return (
+  return ( 
     <StyledApp>
     <Route path='/' component={NavBar} />
     <div className="App">
