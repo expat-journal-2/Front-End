@@ -26,7 +26,7 @@ const StylesUpld = styled.button`
 `;
 
 const StylesContainer = styled.section`
-  text-align: center;
+  text-align: right;
   color: #EAE7DC; 
   cursor: pointer;
   font-size: 1.3em;
