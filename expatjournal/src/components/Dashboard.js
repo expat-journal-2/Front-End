@@ -17,14 +17,25 @@ const ExpatHeader = styled.header`
   `;
 
   const UploadLinks = styled.div`
-  
   background-color: #E85A4F;
+  box-sizing: border-box;
+  height: 200px;
+  width: 300px;
+  border: 1px solid red;
   `;
+
+const StoryBox = styled.div`
+  box-sizing: border-box;
+  width: 115px;
+  border: 5px solid red;
+  background: #D8C3A5;
+  disply: flex;
+  flex-wrap: wrap;
+`;
 
 const StoryLinks = styled.div`
   font-size: .8em;
   
-  flex-direction: row;
 
   .edit-btn{
     text-align: center;
@@ -66,13 +77,13 @@ const Dashboard = (props) => {
                 <div>
                     <StoryLinks>
                     <div id={story.id} className='story'>
-                        
+                        <StoryBox>
                             <Link to={ `/api/stories/${story.id}`}>
                                 {''}
                                 <img src={story.image_URL} /> 
                                 <h1>{story.name}</h1>
                             </Link>
-                        
+                        </StoryBox>
                       <div className='function-btns'>
                           <button className='edit-btn' type='submit'>Edit Story</button>
                           <button className='delete-btn' type='submit'onClick={deleteStory}>Delete Story</button>
