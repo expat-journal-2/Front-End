@@ -1,14 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
-import logo from '../images/logo.jpg';
+import { Link } from "react-router-dom";
+
 
 const FooterSection = styled.footer`
   text-align: center;

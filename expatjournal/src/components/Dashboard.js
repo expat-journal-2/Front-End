@@ -82,43 +82,7 @@ const Dashboard = (props) => {
         <UploadForm component={UploadForm}/>
       </div>
     );
-
-        return (
-            <div className='main'>
-                <ExpatHeader>
-                <div className='new-posts'> New posts from Expats</div>
-                </ExpatHeader>
-                <div className='all-stories'>
-                
-                {/* {console.log(this.props.stories)} */}
-                {/* this.props.stories &&  */}
-                    {props.stories.map(story => {
-                        console.log(story);
-                        return (
-                            <StoryLinks>
-                            <div>
-                                <div id={story.id} className='story'>
-                                    <Link to={ `/api/stories/${story.id}`}>
-                                        {''}
-                                        <img src={story.image_URL} /> 
-                                        
-                                        <h1>{story.name}</h1>
-                                    </Link>
-                                </div>
-                            </div>
-                            </StoryLinks>
-                        );
-                    })}
-                    
-                </div>
-                <UploadLinks>
-                <UploadForm component={UploadForm}/>
-                </UploadLinks>
-            </div>
-            
-        );
-
-    }
+}
 
 const mapStateToProps = state => {
     return {
@@ -132,3 +96,38 @@ export default connect(
     mapStateToProps,
     { fetchStories, deleteStory }
 )(Dashboard);
+
+// return (
+//     <div className='main'>
+//         <ExpatHeader>
+//         <div className='new-posts'> New posts from Expats</div>
+//         </ExpatHeader>
+//         <div className='all-stories'>
+        
+//         {/* {console.log(this.props.stories)} */}
+//         {/* this.props.stories &&  */}
+//             {props.stories.map(story => {
+//                 console.log(story);
+//                 return (
+//                     <StoryLinks>
+//                     <div>
+//                         <div id={story.id} className='story'>
+//                             <Link to={ `/api/stories/${story.id}`}>
+//                                 {''}
+//                                 <img src={story.image_URL} /> 
+                                
+//                                 <h1>{story.name}</h1>
+//                             </Link>
+//                         </div>
+//                     </div>
+//                     </StoryLinks>
+//                 );
+//             })}
+            
+//         </div>
+//         <UploadLinks>
+//         <UploadForm component={UploadForm}/>
+//         </UploadLinks>
+//     </div>
+    
+// );

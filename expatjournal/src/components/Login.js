@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../Utils/axiosWithAuth';
 
 class Login extends React.Component {
