@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { addStory } from '../actions';
 import { connect } from 'react-redux';
 import useForm from '../Utils/useForm';
@@ -16,15 +15,15 @@ const StylesBtn = styled.button`
   border-radius: 9px;
 `;
 
-const StylesUpld = styled.button`
-  text-align: center;
-  color: E85A4F#; 
-  padding: 0px;
-  margin: 4px;
-  background: #EAE7DC;
-  cursor: pointer;
-  border-radius: 9px;
-`;
+// const StylesUpld = styled.button`
+//   text-align: center;
+//   color: E85A4F#; 
+//   padding: 0px;
+//   margin: 4px;
+//   background: #EAE7DC;
+//   cursor: pointer;
+//   border-radius: 9px;
+// `;
 
 const StylesContainer = styled.section`
   text-align: right;

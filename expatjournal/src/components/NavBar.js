@@ -1,14 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../images/logo.jpg';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavSection = styled.header`
   text-align: center;
