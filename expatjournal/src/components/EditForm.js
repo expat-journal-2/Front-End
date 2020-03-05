@@ -3,6 +3,7 @@ import { editStory } from '../actions';
 import { connect } from 'react-redux';
 import useForm from '../Utils/useForm';
 import styled from 'styled-components';
+import { fetchStories } from '../actions';
 
 const StylesBtn = styled.button`
   text-align: center;
@@ -14,15 +15,15 @@ const StylesBtn = styled.button`
   border-radius: 9px;
 `;
 
-const StylesUpld = styled.button`
-  text-align: center;
-  color: E85A4F#; 
-  padding: 0px;
-  margin: 4px;
-  background: #EAE7DC;
-  cursor: pointer;
-  border-radius: 9px;
-`;
+// const StylesUpld = styled.button`
+//   text-align: center;
+//   color: E85A4F#; 
+//   padding: 0px;
+//   margin: 4px;
+//   background: #EAE7DC;
+//   cursor: pointer;
+//   border-radius: 9px;
+// `;
 
 const StylesContainer = styled.section`
   text-align: right;
@@ -35,19 +36,17 @@ const StylesContainer = styled.section`
 
 
 const EditForm = (props) => {
-  const [formInputs, handleChange, clearForms] = useForm();
+  const [formInputs, handleChange, clearForm] = useForm();
 
   const submitHandler = e => {
     e.preventDefault();
-    //get info from BE
-    const {name, content, image_URL, location, author, date, user_id} = formInputs;
-    //check with backend
+     const {name, content, image_URL, location, author, date, user_id} = formInputs;
     props.editStory({name, content, image_URL, location, author, date, user_id});
 
     clearForm();
-    props.editStory();
-  //   props.history.push('/dashboard');
-}
+    props.fetchStories();
+    props.history.push('/dashboard');
+  }
 return (
   <StylesContainer>
     <section className='edit-container'>
@@ -138,7 +137,7 @@ return (
 )    
 }
 
-export default connect(null, { editStory })(EditForm);
+export default connect(null, { editStory, fetchStories })(EditForm);
 
 
 
