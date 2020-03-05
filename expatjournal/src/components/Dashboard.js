@@ -13,15 +13,17 @@ const ExpatHeader = styled.header`
   border: solid;
   background-color: #E85A4F;
   color: #EAE7DC;
+  display: inline-block;
   `;
 
   const StoryLinks = styled.div`
-  font-size: 1em;
+  font-size: .8em;
+  display: flex;
+  flex-wrap: wrap;
   
   `;
 
   const UploadLinks = styled.div`
-  position: absolute;
   
   background-color: #E85A4F;
   `;
@@ -54,32 +56,41 @@ const Dashboard = (props) => {
 
     return (
       <div className='main'>
+          <ExpatHeader>
         <div className='new-posts'> New posts from Expats</div>
+        </ExpatHeader>
         <div className='all-stories'>
             {props.stories.map(story => {
                 // console.log(story);
                 return (
                 <div>
+                    <StoryLinks>
                     <div id={story.id} className='story'>
-                    <Link to={ `/api/stories/${story.id}`}>
-                        {''}
-                        <img src={story.image_URL} /> 
-                        <h1>{story.name}</h1>
-                    </Link>
+                        
+                            <Link to={ `/api/stories/${story.id}`}>
+                                {''}
+                                <img src={story.image_URL} /> 
+                                <h1>{story.name}</h1>
+                            </Link>
+                        
                       <div className='function-btns'>
                         <StylesEdit>
                           <button className='edit-btn' type='submit'>Edit Story</button>
                         </StylesEdit>
                         <StylesDel>
                           <button className='delete-btn' type='submit'onClick={deleteStory}>Delete Story</button>
-                        </StylesDel>  
+                        </StylesDel> 
                       </div>
+                       
                     </div>
+                    </StoryLinks>
                 </div>
                 );
             })}
         </div>
-        <UploadForm component={UploadForm}/>
+            <UploadLinks>
+                <UploadForm component={UploadForm}/>
+            </UploadLinks>
       </div>
     );
 }
