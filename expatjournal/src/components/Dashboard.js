@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchStories } from '../actions/';
 import { Link } from 'react-router-dom';
@@ -7,8 +7,8 @@ import UploadForm from './UploadForm';
 
 const Dashboard = (props) => {
 
-    useFffect( () => {
-        prop.fetchStories();
+    useEffect(() => {
+        props.fetchStories();
         },[]);
 
         return (
