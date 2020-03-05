@@ -1,7 +1,5 @@
 import axios from 'axios';
 import { axiosWithAuth } from '../Utils/axiosWithAuth';
-//may need to update to axiosWithAuth
-//may need to add/remove some of these actions/states
 
 export const FETCH_STORY = 'FETCH_STORY';
 export const FETCH_STORY_SUCCESS = 'FETCH_STORY_SUCCESS';
@@ -43,8 +41,7 @@ export const addStory = add => dispatch => {
       .post('/api/stories', add)
       .then(res => {
         //   console.log(res.data)
-        //   fetchStories()
-          dispatch({ type: ADD_STORY_SUCCESS, payload: add});
+        dispatch({ type: ADD_STORY_SUCCESS, payload: add});
       })
       .catch(err => {
           dispatch({ type: ADD_STORY_ERROR, payload: err})
@@ -55,8 +52,8 @@ export const addStory = add => dispatch => {
 
 export const editStory = storyInfo => dispatch => {
     dispatch({ type: EDIT_STORY });
-    axios
-      .put(`get url from BE/${storyInfo.id}`, storyInfo)
+    axiosWithAuth()
+      .put(`/api/stories/${storyInfo.id}`, storyInfo)
       .then(res => {
           dispatch({ type: EDIT_STORY_SUCCESS, payload: res.data});
       })
@@ -69,8 +66,8 @@ export const editStory = storyInfo => dispatch => {
 
 export const deleteStory = id => dispatch => {
     dispatch({ type: DELETE_STORY});
-    axios
-    .delete(`get URL from BE/${id}`)
+    axiosWithAuth()
+    .delete(`/api/stories/${id}`)
     .then(res => {
         dispatch({ type: DELETE_STORY_SUCCESS, payload: res.data});
     })
