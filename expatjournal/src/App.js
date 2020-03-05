@@ -41,9 +41,14 @@ function App() {
      <button className='main-btn'>Sign In</button>
      </Link> */}
     {/* <UploadForm component={UploadForm}/> */}
-    <Dashboard component={Dashboard} />
+    
      <Router>
+     {/* <Dashboard component={Dashboard} /> */}
+
      <Switch>
+       <PrivateRoute path='/dashboard'>
+        <Dashboard component={Dashboard}/> 
+       </PrivateRoute> 
        <Route exact path='/sign-in' component={Login} />
        <Route exact path='/sign-up' component={SignUp}/>
 a

@@ -4,6 +4,7 @@ import { addStory } from '../actions';
 import { connect } from 'react-redux';
 import useForm from '../Utils/useForm';
 import styled from 'styled-components';
+import { fetchStories } from '../actions';
 
 const StylesBtn = styled.button`
   text-align: center;
@@ -45,7 +46,9 @@ const UploadForm = (props) => {
         const {name, content, image_URL, location, author, date, user_id} = formInputs;
         //check with backend
         props.addStory({name, content, image_URL, location, author, date, user_id});
+        
         clearForm();
+        props.fetchStories();
       //   props.history.push('/dashboard');
     }
 
@@ -141,4 +144,4 @@ const UploadForm = (props) => {
     )    
 }
 
-export default connect(null, { addStory })(UploadForm);
+export default connect(null, { addStory, fetchStories })(UploadForm);

@@ -14,7 +14,7 @@ class Dashboard extends Component {
             <div className='main'>
                 <div className='new-posts'> New posts from Expats</div>
                 <div className='all-stories'>
-                    {this.props.stories.map(story => {
+                    {this.props.stories && this.props.stories.map(story => {
                         console.log(story);
                         return (
                             <div>
