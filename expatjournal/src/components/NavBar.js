@@ -43,9 +43,9 @@ const NavBar = () => {
       
       
       <HeaderDesc>Expat Journal Team 2</HeaderDesc>
-          <Link to='/'> 
-              <button className='nav-btn'>About</button>
-            </Link>
+            <a href='https://reverent-villani-9adcf1.netlify.com/team-page' target="_blank"> 
+              <button className='nav-btn'>About Us</button>
+            </a>
             <a href='https://reverent-villani-9adcf1.netlify.com/' target="_blank"> 
               <button className='nav-btn'>Marketing</button>
             </a>
