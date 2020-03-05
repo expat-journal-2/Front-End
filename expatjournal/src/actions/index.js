@@ -37,12 +37,12 @@ export const fetchStories = () => {
 //Adding stories to API
 
 export const addStory = add => dispatch => {
-    console.log(add);
+    // console.log(add);
     dispatch({ type: ADD_STORY });
     axiosWithAuth()
       .post('/api/stories', add)
       .then(res => {
-          console.log(res.data)
+        //   console.log(res.data)
         //   fetchStories()
           dispatch({ type: ADD_STORY_SUCCESS, payload: add});
       })

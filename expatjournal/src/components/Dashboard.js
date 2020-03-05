@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchStories } from '../actions/';
 import { Link } from 'react-router-dom';
 import UploadForm from './UploadForm';
 
-class Dashboard extends Component {
-    componentDidMount() {
-        this.props.fetchStories();
-    }
-    componentDidUpdate(prevProps) {
-        if(prevProps !== this.props){
-        // this.props.fetchStories();
-        }
-    }
-  
-    render() {
+
+const Dashboard = (props) => {
+
+    useEffect(() => {
+        props.fetchStories();
+        },[]);
+
         return (
             <div className='main'>
                 <div className='new-posts'> New posts from Expats</div>
                 <div className='all-stories'>
                 {/* {console.log(this.props.stories)} */}
                 {/* this.props.stories &&  */}
-                    {this.props.stories.map(story => {
+                    {props.stories.map(story => {
                         console.log(story);
                         return (
                             <div>
@@ -41,7 +37,6 @@ class Dashboard extends Component {
             </div>
         );
     }
-}
 
 const mapStateToProps = state => {
     return {

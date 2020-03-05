@@ -51,7 +51,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 isFetching: false,
                 error: false,
-                stories: [...state.stories, action.payload]
+                stories: [action.payload, ...state.stories]
 
             };
         case ADD_STORY_ERROR:
