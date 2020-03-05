@@ -16,28 +16,17 @@ const ExpatHeader = styled.header`
   display: inline-block;
   `;
 
-  const StoryLinks = styled.div`
-  font-size: .8em;
-  display: flex;
-  flex-wrap: wrap;
-  
-  `;
-
   const UploadLinks = styled.div`
   
   background-color: #E85A4F;
   `;
 
-const StylesDel = styled.button`
-    text-align: center;
-    padding 3 px;
-    margin: 4 px;
-    cursor: pointer;
-    border-radius: 9px;
-    background: #E85A4F;
-    color: #EAE7DC;
-`;
-const StylesEdit = styled.button`
+const StoryLinks = styled.div`
+  font-size: .8em;
+  
+  flex-direction: row;
+
+  .edit-btn{
     text-align: center;
     padding 3 px;
     margin: 4 px;
@@ -45,7 +34,18 @@ const StylesEdit = styled.button`
     border-radius: 9px;
     background: #8E8D8A;
     color: #EAE7DC;
-`;
+  }
+
+  .delete-btn{
+    text-align: center;
+    padding 3 px;
+    margin: 4 px;
+    cursor: pointer;
+    border-radius: 9px;
+    background: #E85A4F;
+    color: #EAE7DC;
+  }
+  `;
 
 const Dashboard = (props) => {
 
@@ -74,12 +74,8 @@ const Dashboard = (props) => {
                             </Link>
                         
                       <div className='function-btns'>
-                        <StylesEdit>
                           <button className='edit-btn' type='submit'>Edit Story</button>
-                        </StylesEdit>
-                        <StylesDel>
                           <button className='delete-btn' type='submit'onClick={deleteStory}>Delete Story</button>
-                        </StylesDel> 
                       </div>
                        
                     </div>
