@@ -18,7 +18,7 @@ const StylesBtn = styled.button`
 
 const StylesUpld = styled.button`
   text-align: center;
-  color: #E85A4F; 
+  color: E85A4F#; 
   padding: 0px;
   margin: 4px;
   background: #EAE7DC;
@@ -46,7 +46,7 @@ const UploadForm = (props) => {
         const {name, content, image_URL, location, author, date, user_id} = formInputs;
         //check with backend
         props.addStory({name, content, image_URL, location, author, date, user_id});
-        
+
         clearForm();
         props.fetchStories();
       //   props.history.push('/dashboard');
