@@ -37,18 +37,16 @@ const Footer = () => {
     return (
         <FooterSection>
             <FooterDesc>copyright &copy; 2020 by Expat Journal Team 2</FooterDesc>
-            <Link to='/'> 
-              <button className='ClickButton'>About</button>
-            </Link>
+            <a href='https://reverent-villani-9adcf1.netlify.com/team-page.html/' target="_blank"> 
+              <button className='ClickButton'>About Us</button>
+            </a>
             <a href='https://reverent-villani-9adcf1.netlify.com/' target="_blank"> 
               <button className='ClickButton'>Marketing</button>
             </a>
             <Link to='/'> 
               <button className='ClickButton'>FAQ</button>
             </Link>
-            <Link to='/sign-in'> 
-              <button className='ClickButton'>Login</button>
-            </Link>
+            
             <Link to='/sign-up'> 
               <button className='ClickButton'>Signup</button>
             </Link>
