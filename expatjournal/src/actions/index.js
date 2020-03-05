@@ -51,6 +51,7 @@ export const addStory = add => dispatch => {
 //Edit an existing story
 
 export const editStory = storyInfo => dispatch => {
+    console.log(storyInfo);
     dispatch({ type: EDIT_STORY });
     axiosWithAuth()
       .put(`/api/stories/${storyInfo.id}`, storyInfo)

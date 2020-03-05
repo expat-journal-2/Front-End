@@ -50,7 +50,7 @@ const Dashboard = (props) => {
                           <button className='edit-btn' type='submit'>Edit Story</button>
                         </StylesEdit>
                         <StylesDel>
-                          <button className='delete-btn' type='submit'>Delete Story</button>
+                          <button className='delete-btn' type='submit'onClick={deleteStory}>Delete Story</button>
                         </StylesDel>  
                       </div>
                     </div>
