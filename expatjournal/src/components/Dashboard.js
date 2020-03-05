@@ -8,13 +8,20 @@ class Dashboard extends Component {
     componentDidMount() {
         this.props.fetchStories();
     }
-
+    componentDidUpdate(prevProps) {
+        if(prevProps !== this.props){
+        // this.props.fetchStories();
+        }
+    }
+  
     render() {
         return (
             <div className='main'>
                 <div className='new-posts'> New posts from Expats</div>
                 <div className='all-stories'>
-                    {this.props.stories && this.props.stories.map(story => {
+                {/* {console.log(this.props.stories)} */}
+                {/* this.props.stories &&  */}
+                    {this.props.stories.map(story => {
                         console.log(story);
                         return (
                             <div>
@@ -22,7 +29,7 @@ class Dashboard extends Component {
                                     <Link to={ `/api/stories/${story.id}`}>
                                         {''}
                                         <img src={story.image_URL} /> 
-                                        {/* check naming conventions!! */}
+                                        
                                         <h1>{story.name}</h1>
                                     </Link>
                                 </div>
