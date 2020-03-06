@@ -15,16 +15,6 @@ const StylesBtn = styled.button`
   border-radius: 9px;
 `;
 
-// const StylesUpld = styled.button`
-//   text-align: center;
-//   color: E85A4F#; 
-//   padding: 0px;
-//   margin: 4px;
-//   background: #EAE7DC;
-//   cursor: pointer;
-//   border-radius: 9px;
-// `;
-
 const StylesContainer = styled.section`
   text-align: right;
   color: #EAE7DC; 
@@ -62,8 +52,7 @@ const UploadForm = (props) => {
                 {/* <p> Upload image</p> */}
 
              </div> 
-             {/* </StylesUpld> */}
-
+            
              <form id='upload-form' onSubmit={submitHandler} className='upload-form'>
                  {/* put buttons/radio buttons here for public/private post option */}
                  <div className='input-container title'>
@@ -104,7 +93,7 @@ const UploadForm = (props) => {
                  </div> */}
 
                  <div className='input-container user_id'>
-                    <label>Choose a date for this trip</label>
+                    <label>User ID</label>
                     <input 
                     type='integer' 
                     id='user_id'

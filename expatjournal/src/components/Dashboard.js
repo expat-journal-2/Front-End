@@ -28,6 +28,24 @@ const ExpatHeader = styled.header`
   display: inline-block;
   `;
 
+  const UploadLinks = styled.div`
+  background-color: #E85A4F;
+  box-sizing: border-box;
+  height: 200px;
+  width: 300px;
+  border: 1px solid red;
+  `;
+
+  const StoryBox = styled.div`
+  box-sizing: border-box;
+  width: 20%;
+  border: 1px solid red;
+  background: #D8C3A5;
+  justify-content: center;
+  margin: auto;
+  `;
+
+
 const StoryLinks = styled.div`
   font-size: .8em;
   border: 1px solid green;
@@ -41,7 +59,6 @@ const StoryLinks = styled.div`
     background: #8E8D8A;
     color: #EAE7DC;
   }
-
   .delete-btn{
     text-align: center;
     padding 3 px;
@@ -82,24 +99,24 @@ const Dashboard = (props) => {
                 <div>
                     <StoryLinks>
                     <div id={story.id} className='story'>
-                        
-                            <Link to={ `/api/stories/${story.id}`}>
+
+      <Link to={ `/api/stories/${story.id}`}>
                                 {''}
                                 <img src={story.image_URL} /> 
                                 <h1>{story.name}</h1>
                             </Link>
-                        
+
                       <div className='function-btns'>
 
-                        <StylesEdit type='button'onClick={() => props.editStory(story.id)}>
+                        {/* <StylesEdit type='button'onClick={() => props.editStory(story.id)}>
                           Edit {/* <button className='edit-btn' type='button' onClick={editStory}>Edit Story</button> */}
-                        </StylesEdit>
+                        {/* </StylesEdit>
                         <StylesDel type='button'onClick={() => props.deleteStory(story.id)}>
                          Delete
-                        </StylesDel>  
+                        </StylesDel>   */} 
 
                           <button className='edit-btn' type='submit'>Edit Story</button>
-                          <button className='delete-btn' type='submit'onClick={deleteStory}>Delete Story</button>
+                          <button className='delete-btn' type='submit'onClick={() => props.deleteStory(story.id)}>Delete Story</button>
 
                       </div>
                        
@@ -108,8 +125,10 @@ const Dashboard = (props) => {
                 </div>
                 );
             })}
-        </div></StoryBox>
-        
+
+        </div>
+        </StoryBox>
+
             <UploadLinks>
                 <UploadForm component={UploadForm}/>
             </UploadLinks>
