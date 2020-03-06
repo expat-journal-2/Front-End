@@ -57,7 +57,7 @@ export const editStory = storyInfo => dispatch => {
       .put(`/api/stories/${storyInfo.id}`, storyInfo)
       .then(res => {
           dispatch({ type: EDIT_STORY_SUCCESS, payload: res.data});
-      })
+          window.location.reload()})
       .catch(err => {
           dispatch({ type: EDIT_STORY_ERROR, payload: err})
       });

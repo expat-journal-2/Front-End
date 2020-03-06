@@ -1,25 +1,17 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchStories, editStory } from '../actions';
+import { fetchStories } from '../actions';
+import EditForm from './EditForm';
 import { deleteStory } from '../actions';
 import { Link } from 'react-router-dom';
 import UploadForm from './UploadForm';
 import styled from 'styled-components';
 
 
-const StoryBox = styled.div`
-  box-sizing: border-box;
-  width: 20%;
-  border: 1px solid red;
-  background: #D8C3A5;
-  
-  justify-content: center;
-  margin: auto;
-  
-`;
-
 const ExpatHeader = styled.header`
   text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
   padding: 10px 0;
   font-size: 1.5em;
   border: solid;
@@ -29,16 +21,37 @@ const ExpatHeader = styled.header`
   `;
 
   const UploadLinks = styled.div`
+  margin-top: 5%;
   background-color: #E85A4F;
   box-sizing: border-box;
   height: 200px;
   width: 300px;
   border: 1px solid red;
+  border-radius: 10px;
+  margin-left: 255px;
+  `;
+
+
+  const StoryBox = styled.div`
+  display: flex;
+  flexwrap: wrap;
+  // box-sizing: border-box;
+  width: 100%;
+  // border: 1px solid red;
+  // background: #D8C3A5;
+  justify-content: center;
+  margin: auto;
   `;
 
 const StoryLinks = styled.div`
   font-size: .8em;
+  height: 200px;
+  border-radius: 10px;
+  // width: 25%;
   border: 1px solid green;
+  background: #D8C3A5;
+  opacity: 0.6;
+  margin: 2%;
 
   .edit-btn{
     text-align: center;
@@ -60,13 +73,6 @@ const StoryLinks = styled.div`
   }
   `;
 
-//  const UploadLinks = styled.div`
-//   background-color: #E85A4F;
-//   box-sizing: border-box;
-//   height: 200px;
-//   width: 300px;
-//   border: 1px solid red;
-//   `;
 
 
 const Dashboard = (props) => {
@@ -82,7 +88,7 @@ const Dashboard = (props) => {
         <div className='new-posts'> New posts from Expats</div>
         </ExpatHeader>
         <StoryBox>
-        <div className='all-stories'>
+        <>
             {props.stories.map(story => {
                 // console.log(story);
                 return (
@@ -97,26 +103,21 @@ const Dashboard = (props) => {
                             </Link>
 
                       <div className='function-btns'>
-
-                        {/* <StylesEdit type='button'onClick={() => props.editStory(story.id)}>
-                          Edit {/* <button className='edit-btn' type='button' onClick={editStory}>Edit Story</button> */}
-                        {/* </StylesEdit>
-                        <StylesDel type='button'onClick={() => props.deleteStory(story.id)}>
-                         Delete
-                        </StylesDel>   */} 
-
-                          <button className='edit-btn' type='submit'>Edit Story</button>
+                        {/* need to setEditing(true) in EditForm while still passing in the story props */}
+                          <button className='edit-btn' type='submit' onClick={() => props.EditForm(props)}>Edit Story</button>
                           <button className='delete-btn' type='submit'onClick={() => props.deleteStory(story.id)}>Delete Story</button>
-
                       </div>
-                       
                     </div>
                     </StoryLinks>
                 </div>
                 );
             })}
 
+        </>
+
+
         </div>
+
         </StoryBox>
 
             <UploadLinks>
@@ -136,6 +137,6 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { fetchStories, deleteStory, editStory }
+    { fetchStories, deleteStory, EditForm }
 )(Dashboard);
 

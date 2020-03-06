@@ -16,9 +16,9 @@ const NavSection = styled.header`
     border-radius: 9px;
   }
 `;
-const HeaderDesc = styled.p`
+const HeaderDesc = styled.h1`
   color: #E85A4F;
-  font-size: 1.2em;
+  font-size: 2rem;
 `;
 
 const NavBarImg = styled.div`
