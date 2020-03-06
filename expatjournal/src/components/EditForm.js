@@ -37,6 +37,8 @@ const StylesContainer = styled.section`
 
 const EditForm = (props) => {
   const [formInputs, handleChange, clearForm] = useForm();
+  const [editing, setEditing] = useState(false);
+
 
   const submitHandler = e => {
     e.preventDefault();

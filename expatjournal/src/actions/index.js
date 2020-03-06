@@ -66,12 +66,14 @@ export const editStory = storyInfo => dispatch => {
 //Delete an existing story
 
 export const deleteStory = id => dispatch => {
+    console.log(id);
     dispatch({ type: DELETE_STORY});
     axiosWithAuth()
     .delete(`/api/stories/${id}`)
     .then(res => {
         dispatch({ type: DELETE_STORY_SUCCESS, payload: res.data});
-    })
+        window.location.reload()})
+
     .catch(err => {
         dispatch({ type: DELETE_STORY_ERROR, payload: err})
     });

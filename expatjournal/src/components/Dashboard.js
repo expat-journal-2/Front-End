@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchStories } from '../actions';
+import { fetchStories, editStory } from '../actions';
 import { deleteStory } from '../actions';
 import { Link } from 'react-router-dom';
 import UploadForm from './UploadForm';
@@ -68,10 +68,10 @@ const Dashboard = (props) => {
                     </Link>
                       <div className='function-btns'>
                         <StylesEdit>
-                          <button className='edit-btn' type='submit'>Edit Story</button>
+                          <button className='edit-btn' type='submit' onClick={editStory}>Edit Story</button>
                         </StylesEdit>
-                        <StylesDel>
-                          <button className='delete-btn' type='submit'onClick={deleteStory}>Delete Story</button>
+                        <StylesDel type='button'onClick={() => props.deleteStory(story.id)}>
+                         Delete {/* <button className='delete-btn' type='submit'onClick={() => deleteStory(story.id)}>Delete Story</button> */}
                         </StylesDel>  
                       </div>
                     </div>
@@ -94,7 +94,7 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { fetchStories, deleteStory }
+    { fetchStories, deleteStory, editStory }
 )(Dashboard);
 
 // return (
