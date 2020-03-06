@@ -26,8 +26,9 @@ const ExpatHeader = styled.header`
   `;
 
   const StoryBox = styled.div`
-  box-sizing: border-box;
-  width: 20%;
+  display: flex;
+  // box-sizing: border-box;
+  width: 25%;
   border: 1px solid red;
   background: #D8C3A5;
   justify-content: center;
@@ -36,7 +37,9 @@ const ExpatHeader = styled.header`
 
 const StoryLinks = styled.div`
   font-size: .8em;
+  // width: 20%;
   border: 1px solid green;
+  margin: 2%;
 
   .edit-btn{
     text-align: center;
