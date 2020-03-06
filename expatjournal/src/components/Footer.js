@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const FooterSection = styled.footer`
   text-align: center;
   padding: 10px 0;
-  position: absolute;
+  
   left: 0;
   right: 0;
   bottom: 0;
