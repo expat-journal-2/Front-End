@@ -27,6 +27,7 @@ const ExpatHeader = styled.header`
 
   const StoryBox = styled.div`
   display: flex;
+  flexwrap: wrap;
   // box-sizing: border-box;
   width: 100%;
   // border: 1px solid red;
@@ -37,7 +38,8 @@ const ExpatHeader = styled.header`
 
 const StoryLinks = styled.div`
   font-size: .8em;
-  // width: 20%;
+  height: 200px;
+  // width: 25%;
   border: 1px solid green;
   background: #D8C3A5;
   opacity: 0.6;
@@ -76,7 +78,7 @@ const Dashboard = (props) => {
         <div className='new-posts'> New posts from Expats</div>
         </ExpatHeader>
         <StoryBox>
-        <div className='all-stories'>
+        <>
             {props.stories.map(story => {
                 // console.log(story);
                 return (
@@ -99,7 +101,7 @@ const Dashboard = (props) => {
                 </div>
                 );
             })}
-        </div>
+        </>
         </StoryBox>
             <UploadLinks>
                 <UploadForm component={UploadForm}/>
