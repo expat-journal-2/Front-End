@@ -13,29 +13,31 @@ const ExpatHeader = styled.header`
   border: solid;
   background-color: #E85A4F;
   color: #EAE7DC;
-  `;
-
-  const StoryLinks = styled.div`
-  font-size: 1em;
-  
+  display: inline-block;
   `;
 
   const UploadLinks = styled.div`
-  position: absolute;
-  
   background-color: #E85A4F;
+  box-sizing: border-box;
+  height: 200px;
+  width: 300px;
+  border: 1px solid red;
   `;
 
-const StylesDel = styled.button`
-    text-align: center;
-    padding 3 px;
-    margin: 4 px;
-    cursor: pointer;
-    border-radius: 9px;
-    background: #E85A4F;
-    color: #EAE7DC;
+const StoryBox = styled.div`
+  box-sizing: border-box;
+  width: 115px;
+  border: 5px solid red;
+  background: #D8C3A5;
+  disply: flex;
+  flex-wrap: wrap;
 `;
-const StylesEdit = styled.button`
+
+const StoryLinks = styled.div`
+  font-size: .8em;
+  
+
+  .edit-btn{
     text-align: center;
     padding 3 px;
     margin: 4 px;
@@ -43,7 +45,18 @@ const StylesEdit = styled.button`
     border-radius: 9px;
     background: #8E8D8A;
     color: #EAE7DC;
-`;
+  }
+
+  .delete-btn{
+    text-align: center;
+    padding 3 px;
+    margin: 4 px;
+    cursor: pointer;
+    border-radius: 9px;
+    background: #E85A4F;
+    color: #EAE7DC;
+  }
+  `;
 
 const Dashboard = (props) => {
 
@@ -54,32 +67,46 @@ const Dashboard = (props) => {
 
     return (
       <div className='main'>
+          <ExpatHeader>
         <div className='new-posts'> New posts from Expats</div>
+        </ExpatHeader>
         <div className='all-stories'>
             {props.stories.map(story => {
                 // console.log(story);
                 return (
                 <div>
+                    <StoryLinks>
                     <div id={story.id} className='story'>
-                    <Link to={ `/api/stories/${story.id}`}>
-                        {''}
-                        <img src={story.image_URL} /> 
-                        <h1>{story.name}</h1>
-                    </Link>
+                        <StoryBox>
+                            <Link to={ `/api/stories/${story.id}`}>
+                                {''}
+                                <img src={story.image_URL} /> 
+                                <h1>{story.name}</h1>
+                            </Link>
+                        </StoryBox>
                       <div className='function-btns'>
+
                         <StylesEdit type='button'onClick={() => props.editStory(story.id)}>
                           Edit {/* <button className='edit-btn' type='button' onClick={editStory}>Edit Story</button> */}
                         </StylesEdit>
                         <StylesDel type='button'onClick={() => props.deleteStory(story.id)}>
                          Delete
                         </StylesDel>  
+
+                          <button className='edit-btn' type='submit'>Edit Story</button>
+                          <button className='delete-btn' type='submit'onClick={deleteStory}>Delete Story</button>
+
                       </div>
+                       
                     </div>
+                    </StoryLinks>
                 </div>
                 );
             })}
         </div>
-        <UploadForm component={UploadForm}/>
+            <UploadLinks>
+                <UploadForm component={UploadForm}/>
+            </UploadLinks>
       </div>
     );
 }
