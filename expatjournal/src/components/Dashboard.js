@@ -6,6 +6,18 @@ import { Link } from 'react-router-dom';
 import UploadForm from './UploadForm';
 import styled from 'styled-components';
 
+
+const StoryBox = styled.div`
+  box-sizing: border-box;
+  width: 20%;
+  border: 1px solid red;
+  background: #D8C3A5;
+  
+  justify-content: center;
+  margin: auto;
+  
+`;
+
 const ExpatHeader = styled.header`
   text-align: center;
   padding: 10px 0;
@@ -33,6 +45,7 @@ const ExpatHeader = styled.header`
   margin: auto;
   `;
 
+
 const StoryLinks = styled.div`
   font-size: .8em;
   border: 1px solid green;
@@ -57,6 +70,15 @@ const StoryLinks = styled.div`
   }
   `;
 
+ const UploadLinks = styled.div`
+  background-color: #E85A4F;
+  box-sizing: border-box;
+  height: 200px;
+  width: 300px;
+  border: 1px solid red;
+  `;
+
+
 const Dashboard = (props) => {
 
     useEffect(() => {
@@ -77,13 +99,13 @@ const Dashboard = (props) => {
                 <div>
                     <StoryLinks>
                     <div id={story.id} className='story'>
-                       
-                            <Link to={ `/api/stories/${story.id}`}>
+
+      <Link to={ `/api/stories/${story.id}`}>
                                 {''}
                                 <img src={story.image_URL} /> 
                                 <h1>{story.name}</h1>
                             </Link>
-                      
+
                       <div className='function-btns'>
 
                         {/* <StylesEdit type='button'onClick={() => props.editStory(story.id)}>
@@ -103,8 +125,10 @@ const Dashboard = (props) => {
                 </div>
                 );
             })}
+
         </div>
         </StoryBox>
+
             <UploadLinks>
                 <UploadForm component={UploadForm}/>
             </UploadLinks>
