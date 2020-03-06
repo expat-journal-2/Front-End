@@ -16,12 +16,14 @@ const StylesBtn = styled.button`
 `;
 
 const StylesContainer = styled.section`
+  // margin-top: 5%;
   text-align: right;
   color: #EAE7DC; 
   cursor: pointer;
   font-size: 1.3em;
   padding: 2px;
   margin: 2px;
+  border-radius: 10px;
 `;
 
 

@@ -9,6 +9,8 @@ import styled from 'styled-components';
 
 const ExpatHeader = styled.header`
   text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
   padding: 10px 0;
   font-size: 1.5em;
   border: solid;
@@ -18,6 +20,7 @@ const ExpatHeader = styled.header`
   `;
 
   const UploadLinks = styled.div`
+  margin-top: 5%;
   background-color: #E85A4F;
   box-sizing: border-box;
   height: 200px;
@@ -39,6 +42,7 @@ const ExpatHeader = styled.header`
 const StoryLinks = styled.div`
   font-size: .8em;
   height: 200px;
+  border-radius: 10px;
   // width: 25%;
   border: 1px solid green;
   background: #D8C3A5;
