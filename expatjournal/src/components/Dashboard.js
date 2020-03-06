@@ -7,16 +7,16 @@ import UploadForm from './UploadForm';
 import styled from 'styled-components';
 
 
-// const StoryBox = styled.div`
-//   box-sizing: border-box;
-//   width: 20%;
-//   border: 1px solid red;
-//   background: #D8C3A5;
+const StoryBox = styled.div`
+  box-sizing: border-box;
+  width: 20%;
+  border: 1px solid red;
+  background: #D8C3A5;
   
-//   justify-content: center;
-//   margin: auto;
+  justify-content: center;
+  margin: auto;
   
-// `;
+`;
 
 const ExpatHeader = styled.header`
   text-align: center;
@@ -35,16 +35,6 @@ const ExpatHeader = styled.header`
   width: 300px;
   border: 1px solid red;
   `;
-
-  const StoryBox = styled.div`
-  box-sizing: border-box;
-  width: 20%;
-  border: 1px solid red;
-  background: #D8C3A5;
-  justify-content: center;
-  margin: auto;
-  `;
-
 
 const StoryLinks = styled.div`
   font-size: .8em;
