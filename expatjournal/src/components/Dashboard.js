@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import UploadForm from './UploadForm';
 import styled from 'styled-components';
 
+
 const ExpatHeader = styled.header`
   text-align: center;
   margin-top: 5%;
@@ -29,6 +30,7 @@ const ExpatHeader = styled.header`
   border-radius: 10px;
   margin-left: 255px;
   `;
+
 
   const StoryBox = styled.div`
   display: flex;
@@ -71,6 +73,8 @@ const StoryLinks = styled.div`
   }
   `;
 
+
+
 const Dashboard = (props) => {
 
     useEffect(() => {
@@ -91,12 +95,13 @@ const Dashboard = (props) => {
                 <div>
                     <StoryLinks>
                     <div id={story.id} className='story'>
-                       
-                            <Link to={ `/api/stories/${story.id}`}>
+
+      <Link to={ `/api/stories/${story.id}`}>
                                 {''}
                                 <img src={story.image_URL} /> 
                                 <h1>{story.name}</h1>
                             </Link>
+
                       <div className='function-btns'>
                         {/* need to setEditing(true) in EditForm while still passing in the story props */}
                           <button className='edit-btn' type='submit' onClick={() => props.EditForm(props)}>Edit Story</button>
@@ -107,8 +112,14 @@ const Dashboard = (props) => {
                 </div>
                 );
             })}
+
         </>
+
+
+        </div>
+
         </StoryBox>
+
             <UploadLinks>
                 <UploadForm component={UploadForm}/>
             </UploadLinks>
@@ -128,3 +139,4 @@ export default connect(
     mapStateToProps,
     { fetchStories, deleteStory, EditForm }
 )(Dashboard);
+
