@@ -30,8 +30,8 @@ function App() {
     <StyledApp>
     <Route path='/' component={NavBar} />
     <div className="App">
-     <h1>Welcome to Expat Journal Team 2</h1>
-     <h2>We will be live Friday 6 March 2020</h2>
+     {/* <h1>Welcome to Expat Journal Team 2</h1>
+     <h2>We will be live Friday 6 March 2020</h2> */}
       
      <Router>
      <Switch>
