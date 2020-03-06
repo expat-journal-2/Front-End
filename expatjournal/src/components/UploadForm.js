@@ -38,7 +38,7 @@ const UploadForm = (props) => {
 
         clearForm();
         props.fetchStories();
-        props.history.push('/dashboard');
+        // props.history.push('/dashboard');
     }
 
     //do we want form checking ??

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { editStory } from '../actions';
 import { connect } from 'react-redux';
 import useForm from '../Utils/useForm';
@@ -47,7 +47,7 @@ const EditForm = (props) => {
 
     clearForm();
     props.fetchStories();
-    props.history.push('/dashboard');
+    // props.history.push('/dashboard');
   }
 return (
   <StylesContainer>
@@ -100,7 +100,7 @@ return (
              </div> */}
 
              <div className='input-container user_id'>
-                <label>Choose a date for this trip</label>
+                <label>User ID</label>
                 <input 
                 type='integer' 
                 id='user_id'
@@ -131,7 +131,8 @@ return (
         <StylesBtn>
 
         <div className='edit-btns'>
-          <button className='edit-btn' form='edit-form' type='submit'>Edit Story</button>  
+       {/* need to add into button? onClick={() => props.editStory(props)} */}
+          <button className='edit-btn' form='edit-form' type='submit' >Edit Story</button>  
         </div>
         </StylesBtn>
     </section>

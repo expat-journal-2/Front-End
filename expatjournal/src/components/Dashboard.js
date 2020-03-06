@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchStories, editStory } from '../actions';
+import { fetchStories } from '../actions';
+import EditForm from './EditForm';
 import { deleteStory } from '../actions';
 import { Link } from 'react-router-dom';
 import UploadForm from './UploadForm';
@@ -83,21 +84,11 @@ const Dashboard = (props) => {
                                 <img src={story.image_URL} /> 
                                 <h1>{story.name}</h1>
                             </Link>
-                      
                       <div className='function-btns'>
-
-                        {/* <StylesEdit type='button'onClick={() => props.editStory(story.id)}>
-                          Edit {/* <button className='edit-btn' type='button' onClick={editStory}>Edit Story</button> */}
-                        {/* </StylesEdit>
-                        <StylesDel type='button'onClick={() => props.deleteStory(story.id)}>
-                         Delete
-                        </StylesDel>   */} 
-
-                          <button className='edit-btn' type='submit'>Edit Story</button>
+                        {/* need to setEditing(true) in EditForm while still passing in the story props */}
+                          <button className='edit-btn' type='submit' onClick={() => props.EditForm(story.id)}>Edit Story</button>
                           <button className='delete-btn' type='submit'onClick={() => props.deleteStory(story.id)}>Delete Story</button>
-
                       </div>
-                       
                     </div>
                     </StoryLinks>
                 </div>
@@ -122,40 +113,5 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { fetchStories, deleteStory, editStory }
+    { fetchStories, deleteStory, EditForm }
 )(Dashboard);
-
-// return (
-//     <div className='main'>
-//         <ExpatHeader>
-//         <div className='new-posts'> New posts from Expats</div>
-//         </ExpatHeader>
-//         <div className='all-stories'>
-        
-//         {/* {console.log(this.props.stories)} */}
-//         {/* this.props.stories &&  */}
-//             {props.stories.map(story => {
-//                 console.log(story);
-//                 return (
-//                     <StoryLinks>
-//                     <div>
-//                         <div id={story.id} className='story'>
-//                             <Link to={ `/api/stories/${story.id}`}>
-//                                 {''}
-//                                 <img src={story.image_URL} /> 
-                                
-//                                 <h1>{story.name}</h1>
-//                             </Link>
-//                         </div>
-//                     </div>
-//                     </StoryLinks>
-//                 );
-//             })}
-            
-//         </div>
-//         <UploadLinks>
-//         <UploadForm component={UploadForm}/>
-//         </UploadLinks>
-//     </div>
-    
-// );
