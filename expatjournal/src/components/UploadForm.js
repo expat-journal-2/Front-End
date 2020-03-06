@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import useForm from '../Utils/useForm';
 import styled from 'styled-components';
 import { fetchStories } from '../actions';
+import { useHistory } from 'react-router-dom';
 
 const StylesBtn = styled.button`
   text-align: center;
@@ -29,6 +30,7 @@ const StylesContainer = styled.section`
 
 const UploadForm = (props) => {
     const [ formInputs, handleChange, clearForm ] = useForm();
+    const history = useHistory();
    //  const user = localStorage.getItem('username');
 
     const submitHandler = e => {
@@ -40,7 +42,7 @@ const UploadForm = (props) => {
 
         clearForm();
         props.fetchStories();
-        // props.history.push('/dashboard');
+        history.push('/dashboard');
     }
 
     //do we want form checking ??

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { editStory } from '../actions';
 import { connect } from 'react-redux';
 import useForm from '../Utils/useForm';
@@ -38,6 +39,7 @@ const StylesContainer = styled.section`
 const EditForm = (props) => {
   const [formInputs, handleChange, clearForm] = useForm();
   const [editing, setEditing] = useState(false);
+  const history = useHistory();
 
 
   const submitHandler = e => {
@@ -47,7 +49,7 @@ const EditForm = (props) => {
 
     clearForm();
     props.fetchStories();
-    // props.history.push('/dashboard');
+    history.push('/dashboard');
   }
 return (
   <StylesContainer>
