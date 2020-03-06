@@ -51,7 +51,7 @@ export const addStory = add => dispatch => {
 //Edit an existing story
 
 export const editStory = storyInfo => dispatch => {
-    console.log(storyInfo);
+    console.log('from edit put', storyInfo);
     dispatch({ type: EDIT_STORY });
     axiosWithAuth()
       .put(`/api/stories/${storyInfo.id}`, storyInfo)
@@ -66,7 +66,7 @@ export const editStory = storyInfo => dispatch => {
 //Delete an existing story
 
 export const deleteStory = id => dispatch => {
-    console.log(id);
+    console.log('from delete', id);
     dispatch({ type: DELETE_STORY});
     axiosWithAuth()
     .delete(`/api/stories/${id}`)
