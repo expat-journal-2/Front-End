@@ -26,6 +26,8 @@ const ExpatHeader = styled.header`
   height: 200px;
   width: 300px;
   border: 1px solid red;
+  border-radius: 10px;
+  margin-left: 255px;
   `;
 
   const StoryBox = styled.div`
@@ -97,7 +99,7 @@ const Dashboard = (props) => {
                             </Link>
                       <div className='function-btns'>
                         {/* need to setEditing(true) in EditForm while still passing in the story props */}
-                          <button className='edit-btn' type='submit' onClick={() => props.EditForm(story.id)}>Edit Story</button>
+                          <button className='edit-btn' type='submit' onClick={() => props.EditForm(props)}>Edit Story</button>
                           <button className='delete-btn' type='submit'onClick={() => props.deleteStory(story.id)}>Delete Story</button>
                       </div>
                     </div>
