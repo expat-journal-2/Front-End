@@ -36,16 +36,6 @@ const ExpatHeader = styled.header`
   border: 1px solid red;
   `;
 
-  const StoryBox = styled.div`
-  box-sizing: border-box;
-  width: 20%;
-  border: 1px solid red;
-  background: #D8C3A5;
-  justify-content: center;
-  margin: auto;
-  `;
-
-
 const StoryLinks = styled.div`
   font-size: .8em;
   border: 1px solid green;
@@ -69,15 +59,6 @@ const StoryLinks = styled.div`
     color: #EAE7DC;
   }
   `;
-
- const UploadLinks = styled.div`
-  background-color: #E85A4F;
-  box-sizing: border-box;
-  height: 200px;
-  width: 300px;
-  border: 1px solid red;
-  `;
-
 
 const Dashboard = (props) => {
 
