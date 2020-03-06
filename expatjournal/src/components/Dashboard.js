@@ -8,17 +8,6 @@ import UploadForm from './UploadForm';
 import styled from 'styled-components';
 
 
-const StoryBox = styled.div`
-  box-sizing: border-box;
-  width: 20%;
-  border: 1px solid red;
-  background: #D8C3A5;
-  
-  justify-content: center;
-  margin: auto;
-  
-`;
-
 const ExpatHeader = styled.header`
   text-align: center;
   margin-top: 5%;
@@ -42,6 +31,7 @@ const ExpatHeader = styled.header`
   margin-left: 255px;
   `;
 
+
   const StoryBox = styled.div`
   display: flex;
   flexwrap: wrap;
@@ -52,7 +42,6 @@ const ExpatHeader = styled.header`
   justify-content: center;
   margin: auto;
   `;
-
 
 const StoryLinks = styled.div`
   font-size: .8em;
@@ -84,13 +73,6 @@ const StoryLinks = styled.div`
   }
   `;
 
- const UploadLinks = styled.div`
-  background-color: #E85A4F;
-  box-sizing: border-box;
-  height: 200px;
-  width: 300px;
-  border: 1px solid red;
-  `;
 
 
 const Dashboard = (props) => {
@@ -120,9 +102,13 @@ const Dashboard = (props) => {
                                 <h1>{story.name}</h1>
                             </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> af53a6972af98b2667dae96c932ef92601f1198b
+=======
+
+>>>>>>> 5366d7c3a4f470d0d7fcd85a2e6717637fa64b41
                       <div className='function-btns'>
                         {/* need to setEditing(true) in EditForm while still passing in the story props */}
                           <button className='edit-btn' type='submit' onClick={() => props.EditForm(props)}>Edit Story</button>
@@ -134,11 +120,20 @@ const Dashboard = (props) => {
                 );
             })}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </>
 =======
 
         </div>
 >>>>>>> af53a6972af98b2667dae96c932ef92601f1198b
+=======
+
+        </>
+
+
+        </div>
+
+>>>>>>> 5366d7c3a4f470d0d7fcd85a2e6717637fa64b41
         </StoryBox>
 
             <UploadLinks>
@@ -160,3 +155,4 @@ export default connect(
     mapStateToProps,
     { fetchStories, deleteStory, EditForm }
 )(Dashboard);
+
