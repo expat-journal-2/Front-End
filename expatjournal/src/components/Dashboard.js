@@ -40,6 +40,7 @@ const StoryLinks = styled.div`
   // width: 20%;
   border: 1px solid green;
   background: #D8C3A5;
+  opacity: 0.6;
   margin: 2%;
 
   .edit-btn{
