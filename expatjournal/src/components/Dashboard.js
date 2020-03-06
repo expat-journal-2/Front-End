@@ -28,7 +28,7 @@ const ExpatHeader = styled.header`
   const StoryBox = styled.div`
   display: flex;
   // box-sizing: border-box;
-  width: 25%;
+  width: 100%;
   border: 1px solid red;
   background: #D8C3A5;
   justify-content: center;
