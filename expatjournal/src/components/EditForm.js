@@ -60,6 +60,8 @@ return (
          </div> 
          {/* </StylesUpld> */}
 
+
+      {editing && (
          <form id='edit-form' onSubmit={submitHandler} className='edit-form'>
              {/* put buttons/radio buttons here for public/private post option */}
              <div className='input-container title'>
@@ -127,6 +129,7 @@ return (
 
         </div> 
         </form>
+        )}
         </div> 
         <StylesBtn>
 

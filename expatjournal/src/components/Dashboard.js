@@ -67,11 +67,11 @@ const Dashboard = (props) => {
                         <h1>{story.name}</h1>
                     </Link>
                       <div className='function-btns'>
-                        <StylesEdit>
-                          <button className='edit-btn' type='submit' onClick={editStory}>Edit Story</button>
+                        <StylesEdit type='button'onClick={() => props.editStory(story.id)}>
+                          Edit {/* <button className='edit-btn' type='button' onClick={editStory}>Edit Story</button> */}
                         </StylesEdit>
                         <StylesDel type='button'onClick={() => props.deleteStory(story.id)}>
-                         Delete {/* <button className='delete-btn' type='submit'onClick={() => deleteStory(story.id)}>Delete Story</button> */}
+                         Delete
                         </StylesDel>  
                       </div>
                     </div>
