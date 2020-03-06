@@ -17,7 +17,7 @@ class Login extends React.Component {
 
     login = e => {
         e.preventDefault();
-        console.log(this.state.credentials)
+        // console.log(this.state.credentials)
         axiosWithAuth()
         //get stub from BE
           .post('/api/auth/login', this.state.credentials)
