@@ -7,6 +7,18 @@ import { Link } from 'react-router-dom';
 import UploadForm from './UploadForm';
 import styled from 'styled-components';
 
+
+const StoryBox = styled.div`
+  box-sizing: border-box;
+  width: 20%;
+  border: 1px solid red;
+  background: #D8C3A5;
+  
+  justify-content: center;
+  margin: auto;
+  
+`;
+
 const ExpatHeader = styled.header`
   text-align: center;
   margin-top: 5%;
@@ -41,6 +53,7 @@ const ExpatHeader = styled.header`
   margin: auto;
   `;
 
+
 const StoryLinks = styled.div`
   font-size: .8em;
   height: 200px;
@@ -71,6 +84,15 @@ const StoryLinks = styled.div`
   }
   `;
 
+ const UploadLinks = styled.div`
+  background-color: #E85A4F;
+  box-sizing: border-box;
+  height: 200px;
+  width: 300px;
+  border: 1px solid red;
+  `;
+
+
 const Dashboard = (props) => {
 
     useEffect(() => {
@@ -91,12 +113,16 @@ const Dashboard = (props) => {
                 <div>
                     <StoryLinks>
                     <div id={story.id} className='story'>
-                       
-                            <Link to={ `/api/stories/${story.id}`}>
+
+      <Link to={ `/api/stories/${story.id}`}>
                                 {''}
                                 <img src={story.image_URL} /> 
                                 <h1>{story.name}</h1>
                             </Link>
+<<<<<<< HEAD
+=======
+
+>>>>>>> af53a6972af98b2667dae96c932ef92601f1198b
                       <div className='function-btns'>
                         {/* need to setEditing(true) in EditForm while still passing in the story props */}
                           <button className='edit-btn' type='submit' onClick={() => props.EditForm(props)}>Edit Story</button>
@@ -107,8 +133,14 @@ const Dashboard = (props) => {
                 </div>
                 );
             })}
+<<<<<<< HEAD
         </>
+=======
+
+        </div>
+>>>>>>> af53a6972af98b2667dae96c932ef92601f1198b
         </StoryBox>
+
             <UploadLinks>
                 <UploadForm component={UploadForm}/>
             </UploadLinks>
